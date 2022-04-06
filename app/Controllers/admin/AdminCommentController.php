@@ -8,6 +8,7 @@ use App\Models\Articles;
 use App\Models\Reponse_com;
 use App\Models\Commentaires;
 use App\Controllers\Controller;
+use App\Controllers\Components\MenuAdminComponent;
 
 class AdminCommentController extends Controller
 {
@@ -32,7 +33,9 @@ class AdminCommentController extends Controller
         $answersCommunityManag = $this->model->selectAnswerCommentwithArticleUser($nombreofweek);
         $articles = $this->modelArticles->findAll();
 
-        $this->view('administrator/comment/index', compact('title', 'comment', 'articles', 'answers', 'commentCommunityManag', 'answersCommunityManag'));
+        $menuAdmin = MenuAdminComponent::Menu();
+
+        $this->view('administrator/comment/index', compact('title', 'comment', 'articles', 'answers', 'commentCommunityManag', 'answersCommunityManag', 'menuAdmin'));
     }
 
     public function update()

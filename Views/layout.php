@@ -28,6 +28,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php require_once 'header.php'; ?>
     </header>
     <main>
+
         <?php require_once 'panier.php'; ?>
         <?= $pageContent ?>
     </main>

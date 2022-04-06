@@ -2,9 +2,10 @@
 
 namespace App\Controllers\admin;
 
-use App\Controllers\Controller;
-
 use App\Models\Categories;
+
+use App\Controllers\Controller;
+use App\Controllers\Components\MenuAdminComponent;
 
 class AdminCategoryController extends Controller
 {
@@ -20,7 +21,9 @@ class AdminCategoryController extends Controller
 
         $category = $this->model->findAll();
 
-        $this->view('administrator/category/index', compact('title', 'category'));
+        $menuAdmin = MenuAdminComponent::Menu();
+
+        $this->view('administrator/category/index', compact('title', 'category', 'menuAdmin'));
     }
 
     public function update()

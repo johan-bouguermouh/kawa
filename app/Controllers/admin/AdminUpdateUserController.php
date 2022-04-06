@@ -2,9 +2,10 @@
 
 namespace App\Controllers\admin;
 
-use App\Controllers\Controller;
-
 use App\Models\Utilisateurs;
+
+use App\Controllers\Controller;
+use App\Controllers\Components\MenuAdminComponent;
 
 class AdminUpdateUserController extends Controller
 {
@@ -18,7 +19,9 @@ class AdminUpdateUserController extends Controller
         $updateUser = $this->updateUser($param);
         $userInfos = $this->getUser($param);
 
-        $this->view('administrator.updateUser', compact('title', 'users', 'param', 'userInfos'));
+        $menuAdmin = MenuAdminComponent::Menu();
+
+        $this->view('administrator.updateUser', compact('title', 'users', 'param', 'userInfos', 'menuAdmin'));
     }
 
     public function getAllUser()

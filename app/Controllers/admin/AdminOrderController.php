@@ -2,10 +2,11 @@
 
 namespace App\Controllers\admin;
 
-use App\Controllers\Controller;
-
 use App\Models\Livraison;
+
 use App\Models\NumCommande;
+use App\Controllers\Controller;
+use App\Controllers\Components\MenuAdminComponent;
 
 class AdminOrderController extends Controller
 {
@@ -22,11 +23,11 @@ class AdminOrderController extends Controller
 
         $livraison = $this->modelNumCommande->getAllOrderbyIdUser();
 
-
+        $menuAdmin = MenuAdminComponent::Menu();
 
         $nb = $this->modelNumCommande->countWaitingValidate();
 
-        $this->view('administrator/orderhistory/index', compact('title', 'livraison', 'nb'));
+        $this->view('administrator/orderhistory/index', compact('title', 'livraison', 'nb', 'menuAdmin'));
     }
 
     public function update()

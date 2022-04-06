@@ -54,6 +54,8 @@ define('VIEWS', __DIR__ . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 
 
 define('REDIRECT', __DIR__ . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 'shop' . DIRECTORY_SEPARATOR . 'livraison.php');
 
+define('MENUAD', __DIR__ . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 'menuAdmin' . DIRECTORY_SEPARATOR . 'menuAdmin.php');
+
 
 function error($param)
 {

@@ -2,9 +2,13 @@
 
 namespace App\Controllers\admin;
 
+use App\Models\Tag;
+
 use App\Controllers\Controller;
 
-use App\Models\Tag;
+use App\Controllers\Components\MenuAdminComponent;
+
+
 
 class AdminTagController extends Controller
 {
@@ -20,7 +24,9 @@ class AdminTagController extends Controller
 
         $tag = $this->model->findAll();
 
-        $this->view('administrator/tag/index', compact('title', 'tag'));
+        $menuAdmin = MenuAdminComponent::Menu();
+
+        $this->view('administrator/tag/index', compact('title', 'tag', 'menuAdmin'));
     }
 
     public function update()
