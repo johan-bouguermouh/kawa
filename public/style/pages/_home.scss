@@ -2,376 +2,375 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 .hero {
+  width: 100%;
+  height: calc(100vw * 0.478);
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & img:first-child {
     width: 100%;
-    height: calc(100vw * 0.478);
+    position: absolute;
     min-height: 400px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    & img:first-child {
-        width: 100%;
-        position: absolute;
-        min-height: 400px;
-        min-width: 836px;
-        height: auto;
-        object-fit: cover;
-    }
+    min-width: 836px;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 .CTA {
-    width: 60%;
-    z-index: 1;
+  width: 60%;
+  z-index: 1;
+  color: white;
+  font-family: "DM Serif Display", serif;
+  & H1 {
+    font-size: clamp(2rem, 3vw, 6rem);
+  }
+  & H2 {
+    font-size: clamp(2rem, 3vw, 6rem);
+  }
+  & button {
+    width: 20%;
+    height: 50%;
+    background-color: #135e4c;
     color: white;
-    font-family: "DM Serif Display", serif;
-    & H1 {
-        font-size: clamp(2rem, 3vw, 6rem);
-    }
-    & H2 {
-        font-size: clamp(2rem, 3vw, 6rem);
-    }
-    & button {
-        width: 20%;
-        height: 50%;
-        background-color: #135e4c;
-        color: white;
-        border: none;
-        font-family: "century-gothic, sans-serif";
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-weight: bold;
-        font-size: 2rem;
-        margin-top: 1rem;
-        box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
-    }
-    button:hover {
-        background-color: #247865;
-        cursor: pointer;
-    }
+    border: none;
+    font-family: "century-gothic, sans-serif";
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1rem;
+    box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
+  }
+  button:hover {
+    background-color: #247865;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-device-width: 768px) {
-    .hero {
-        justify-content: end;
-    }
+  .hero {
+    justify-content: end;
+  }
 }
 
 .homeContainer {
-    margin-right: 10%;
-    margin-left: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .introHome {
+  display: flex;
+  justify-content: center;
+  border-bottom: #1d705dd9 solid 0.5px;
+  section {
+    margin: 2%;
+    padding: 2%;
+    width: 60%;
     display: flex;
-    justify-content: center;
-    border-bottom: #1d705dd9 solid 0.5px;
-    section {
-        margin: 2%;
-        padding: 2%;
-        width: 60%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        img {
-            width: 20%;
-            margin-bottom: 4%;
-        }
-        p {
-            text-align: stretch;
-            font-size: clamp(1rem, 2.5vw, 2rem);
-        }
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 20%;
+      margin-bottom: 4%;
     }
+    p {
+      text-align: stretch;
+      font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+  }
 }
 
 .containerCard {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cardChoice {
-    width: calc((100vw / 2) - 16px);
-    margin: 16px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: 0.7s;
-    a img {
-        width: 100%;
-    }
-    a p {
-        text-align: center;
-        padding: 5%;
-        font-weight: 400;
-        font-size: 1.5rem;
-    }
+  width: calc((100% / 2) - 16px);
+  margin: 16px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.7s;
+  background-color: white;
+  a img {
+    width: 100%;
+  }
+  a p {
+    text-align: center;
+    padding: 5%;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
 }
 
 .home_title {
-    text-align: center;
-    padding: 4%;
-    color: rgb(18, 94, 76);
+  text-align: center;
+  padding: 4%;
+  color: rgb(18, 94, 76);
 }
-
 
 /***************CONTAINER RESPONSIVE ***************/
 
 .container_responsive {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 100vw;
-    padding-bottom: 4%;
-    border-bottom: #1d705dd9 solid 0.5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  padding-bottom: 4%;
+  border-bottom: #1d705dd9 solid 0.5px;
 }
 
 #img2 {
-    display: flex;
-    justify-content: flex-end;
-    width: 20vw;
-    align-self: flex-start;
-    height: 40vh;
+  display: flex;
+  justify-content: flex-end;
+  width: 20vw;
+  align-self: flex-start;
+  height: 40vh;
 }
 
 #img1 {
-    display: flex;
-    justify-content: flex-end;
-    width: 20vw;
-    height: 40vh;
+  display: flex;
+  justify-content: flex-end;
+  width: 20vw;
+  height: 40vh;
 }
 
 #img3 {
-    display: flex;
-    justify-content: flex-end;
-    width: 20vw;
-    align-self: flex-end;
-    height: 40vh;
+  display: flex;
+  justify-content: flex-end;
+  width: 20vw;
+  align-self: flex-end;
+  height: 40vh;
 }
 
 .container_responsive .card {
-    position: relative;
-    width: 25rem;
-    height: 25rem;
-    margin: 0.9375rem;
-    overflow: hidden;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  margin: 0.9375rem;
+  overflow: hidden;
 }
 
 .container_responsive .imgBx,
 .container_responsive .contentBx {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container_responsive .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .container_responsive .contentBx::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    transform: scaleX(0);
-    transition: transform 0.5s ease-in-out;
-    transform-origin: right;
-    transition-delay: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+  transition-delay: 0.5s;
 }
 
 .container_responsive .card:hover .contentBx::before {
-    transform: scaleX(1);
-    transition: transform 0.5s ease-in-out;
-    transform-origin: left;
-    transition-delay: 0s;
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+  transition-delay: 0s;
 }
 
 .container_responsive .contentBx {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container_responsive .content {
-    position: relative;
-    padding: 1.875rem;
-    z-index: 1;
-    transition: 0.5s;
-    transform: translateY(-300px);
-    transition-delay: 0s;
+  position: relative;
+  padding: 1.875rem;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateY(-300px);
+  transition-delay: 0s;
 }
 
 .container_responsive .card:hover .contentBx .content {
-    transform: translateX(0px);
-    transition-delay: 0.5s;
+  transform: translateX(0px);
+  transition-delay: 0.5s;
 }
 
 .container_responsive h3 {
-    color: rgb(18, 94, 76);
-    font-size: 1.3em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  color: rgb(18, 94, 76);
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .container_responsive p {
-    color: rgb(18, 94, 76);
-    font-size: 1em;
-    line-height: 1.4em;
-    font-weight: 300;
+  color: rgb(18, 94, 76);
+  font-size: 1em;
+  line-height: 1.4em;
+  font-weight: 300;
 }
 
-
 /*************** v2 ****************/
-
 
 /*****************FIN CONTAINER RESPONSIVE ***********/
 
 .cardChoice:hover {
-    filter: brightness(66%);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+  filter: brightness(66%);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
 }
 
 @media only screen and (min-device-width: 768px) {
-    .cardChoice {
-        width: calc((100vw / 4) - 32px);
-    }
+  .cardChoice {
+    width: calc((100% / 4) - 32px);
+    background-color: white;
+  }
 }
 
 .homeProposition {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-device-width: 1024px) {
-    .homeProposition {
-        justify-content: center;
-    }
-    .cardChoice {
-        width: calc((100vw / 4) - 32px);
-    }
-    #img1 {
-        display: flex;
-        width: 30vw;
-        height: 15vh;
-    }
-    #img2 {
-        display: flex;
-        width: 30vw;
-        height: 15vh;
-    }
-    #img3 {
-        display: flex;
-        width: 30vw;
-        height: 15vh;
-    }
+  .homeProposition {
+    justify-content: center;
+  }
+  .cardChoice {
+    width: calc((100vw / 4) - 32px);
+  }
+  #img1 {
+    display: flex;
+    width: 30vw;
+    height: 15vh;
+  }
+  #img2 {
+    display: flex;
+    width: 30vw;
+    height: 15vh;
+  }
+  #img3 {
+    display: flex;
+    width: 30vw;
+    height: 15vh;
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
-    .scrollHorizontal::-webkit-scrollbar {
-        width: 0;
+  .scrollHorizontal::-webkit-scrollbar {
+    width: 0;
+  }
+  .cardChoice {
+    width: calc((100vw / 4) - 32px);
+  }
+  .homeProposition {
+    justify-content: center;
+  }
+  .cardChoice {
+    width: calc((100vw / 4) - 32px);
+  }
+  .CTA {
+    width: 60%;
+    & button {
+      width: 50%;
     }
-    .cardChoice {
-        width: calc((100vw / 4) - 32px);
+  }
+  .hero {
+    min-height: 290px;
+    width: 100vw;
+    & img:first-child {
+      min-height: 290px;
+      min-width: 536px;
     }
-    .homeProposition {
-        justify-content: center;
-    }
-    .cardChoice {
-        width: calc((100vw / 4) - 32px);
-    }
-    .CTA {
-        width: 60%;
-        & button {
-            width: 50%;
-        }
-    }
-    .hero {
-        min-height: 290px;
-        width: 100vw;
-        & img:first-child {
-            min-height: 290px;
-            min-width: 536px;
-        }
-    }
+  }
 }
 
 @media only screen and (max-device-width: 600px) {
-    .homeContainer {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    .scrollHorizontal {
-        width: 100%;
-        overflow-x: scroll;
-    }
-    .containerCard {
-        display: flex;
-        flex-direction: row;
-        width: calc(8 * 90%);
-        overflow-x: scroll;
-        justify-content: center;
-    }
-    .cardChoice {
-        width: 80vw;
-    }
-    #img1 {
-        justify-content: center;
-        width: 90vw;
-        align-self: center;
-        height: 30vh;
-    }
-    #img2 {
-        justify-content: center;
-        width: 90vw;
-        align-self: center;
-        height: 30vh;
-    }
-    #img3 {
-        justify-content: center;
-        width: 90vw;
-        align-self: center;
-        height: 30vh;
-    }
-    .CTA {
-        margin-left: 50px;
-    }
+  .homeContainer {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .scrollHorizontal {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .containerCard {
+    display: flex;
+    flex-direction: row;
+    width: calc(8 * 90%);
+    overflow-x: scroll;
+    justify-content: center;
+  }
+  .cardChoice {
+    width: 80vw;
+  }
+  #img1 {
+    justify-content: center;
+    width: 90vw;
+    align-self: center;
+    height: 30vh;
+  }
+  #img2 {
+    justify-content: center;
+    width: 90vw;
+    align-self: center;
+    height: 30vh;
+  }
+  #img3 {
+    justify-content: center;
+    width: 90vw;
+    align-self: center;
+    height: 30vh;
+  }
+  .CTA {
+    margin-left: 50px;
+  }
 }
 
 @media only screen and (max-device-width: 320px) {
-    .CTA {
-        & button {
-            width: 60%;
-        }
+  .CTA {
+    & button {
+      width: 60%;
     }
-    .hero {
-        min-height: 280px;
-        & img:first-child {
-            min-height: 290px;
-            min-width: 536px;
-        }
+  }
+  .hero {
+    min-height: 280px;
+    & img:first-child {
+      min-height: 290px;
+      min-width: 536px;
     }
+  }
 }
 
 .lastProduct {
     margin-top: 4%;
     position: relative;
-    & img:last-child {
+    & .vignette {
         width: 80px;
         position: absolute;
         top: -16px;

@@ -9,13 +9,11 @@
     margin: 24px;
     background-color: white;
     &__image {
-        height: 250px;
         width: 400px;
     }
-    &__heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &__number {
+        position: relative;
+        bottom: 5px;
     }
     &__title {
         padding: 12px 0;
@@ -26,6 +24,7 @@
     .like {
         display: flex;
         &__button {
+            width: 15px;
             border: none;
         }
         &__number {
@@ -49,6 +48,17 @@
     .price {
         align-self: flex-end;
         color: #135e4c;
+        font-size: 2rem;
+    }
+}
+
+.item__grain {
+    display: inline-block;
+    width: 15px;
+    &--none{
+        display: inline-block;
+        width: 15px;
+        opacity: 0.5;
     }
 }
 
@@ -183,4 +193,8 @@
         margin: auto;
         width: 100%;
     }
+}
+
+.test {
+    fill: #135e4c;
 }

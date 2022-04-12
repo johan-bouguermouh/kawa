@@ -34,7 +34,9 @@ class CardCompenent extends Product
     ?>
         <a href="/boutique-en-ligne/produit/<?=$dataProduct['id_article']?>">
         <section class="card">
-            <img <?=$id?> class="card__picture" src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?=$dataProduct['image_article']?>" alt="">
+            <div class="card__picture">
+                <img <?=$id?> src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?=$dataProduct['image_article']?>" alt="">
+            </div>
             <?php if(isset($dataProduct['SPÉCIFICITÉ']) && in_array('Biologique',$dataProduct['SPÉCIFICITÉ'])==true):?>
                 <img class="card__logoAb" src="/boutique-en-ligne/public/assets/pictures/pictures_product/kawa_logo_ab.png" alt="">
             <?php endif;?>

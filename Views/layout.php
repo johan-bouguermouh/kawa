@@ -31,10 +31,11 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <body>
     <header id="header">
+        <?php require_once 'panier.php'; ?>
         <?php require_once 'header.php'; ?>
     </header>
     <main>
-        <?php require_once 'panier.php'; ?>
+        
         <?= $pageContent ?>
     </main>
     <footer>

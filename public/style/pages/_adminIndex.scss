@@ -1,7 +1,8 @@
 .sideBarreAdmin {
     width: 100%;
     min-width: 400px;
-    height: 92vh;
+    height: auto;
+    min-height: 92vh;
     padding: 32px;
     display: flex;
     flex-direction: column;

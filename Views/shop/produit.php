@@ -1,11 +1,6 @@
-<!-- <?php var_dump($_SESSION); ?> -->
-<!-- <?php var_dump($product); ?> -->
-<!-- <?php var_dump($categories); ?> -->
-<!-- <?php var_dump($comments); ?> -->
-<!-- <?php var_dump($CatOfProduct); ?> -->
-<!-- <?php var_dump($likes); ?> -->
+
 <div class="containerProduit">
-    <section class="alert">
+    <section class="alert alert--success">
         <?php if (isset($_SESSION['flash'])) : ?>
             <?php foreach ($_SESSION['flash'] as $type => $message) : ?>
                 <p class="alert__message"><?= $message; ?></p>
@@ -54,9 +49,20 @@
                         <?php endforeach; ?>
                         <!-- <?php implode(',', $CatOfProduct['flavor']); ?> -->
                     </li>
+                    <li class="details__item"><span>Force :</span>
+                        <?php for ($i=0; $i < 5; $i++) { 
+                            if($i < intval($CatOfProduct['strong'][0]['nom_categorie']))
+                            { ?>
+                                <img class="item__grain" src="../public/assets/pictures/kawa_icon_strong.svg" alt="graine de café">
+                           <?php }
+                           else{ ?>
+                            <img class="item__grain--none" src="../public/assets/pictures/kawa_icon_strong.svg" alt="graine de café">
+                           <?php }
+                        } ?>
+                    </li>
                 </ul>
                 <p><?= $product[0]['description_article'] ?></p>
-                <p><?= $product[0]['fournisseur'] ?></p>
+                <p>Fournisseur : <?= $product[0]['fournisseur'] ?></p>
                 <p><?= $product[0]['conditionnement'] ?></p>
 
 

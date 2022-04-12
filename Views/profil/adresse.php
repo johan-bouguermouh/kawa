@@ -3,16 +3,17 @@
         <div>
             <h2>Profil</h2>
             <ul>
-                <li><a href="/../boutique-en-ligne/profil/modifierProfil">Modifier mon profil</a></li>
-                <li><a href="/../boutique-en-ligne/profil/modifierMotdePasse">Modifier mon mot de passe</a></li>
-                <li><a href="/../boutique-en-ligne/profil/historiqueCommande">Historique de commande</a></li>
-                <li><a href="/../boutique-en-ligne/deconnexion">Se deconnecter</a></li>
+                <li><a href="/../boutique-en-ligne/profil/modifierProfil">Modifier mon profil</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/modifierMotdePasse">Modifier mon mot de passe</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="">Adresse de livraison</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/historiqueCommande">Historique de commande</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/deconnexion">Se deconnecter</a></li>
             </ul>
         </div>
     </section>
 
     <article class="form">
-        <h1>Adresse de Livraison</h1>
+        <h1 class="title__profil">Adresse de Livraison</h1>
         <section class="alert">
             <?php if (isset($_SESSION['flash'])) : ?>
                 <?php foreach ($_SESSION['flash'] as $type => $message) : ?>
@@ -27,12 +28,14 @@
 
         <section>
 
-            <?php for ($i = 0; $i <= 2; $i++) : ?>
+            <?php
+
+            for ($i = 0; $i <= 2; $i++) : ?>
                 <?php if (isset($userAdress[$i])) : ?>
                     <p><?= $userAdress[$i]['nom_adresse'] ?></p>
                     <button class="form__button form__button--update"><a href="./adresse/modifierAdresse/<?= $userAdress[$i]['id_adresse'] ?>">Modifier</a></button><br>
                 <?php else : ?>
-                    <a class="form__link" href="./adresse/creerAdresse">Nouvelle adresse</a>
+                    <a class="form__link">Adresse disponible N° <?= $i + 1 ?></a>
                 <?php endif; ?>
             <?php endfor; ?>
 

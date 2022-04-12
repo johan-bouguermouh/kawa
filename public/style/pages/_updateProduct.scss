@@ -134,7 +134,7 @@
         .buttonDelete{
             background-color: rgba(224, 95, 95, 0.15);
             border: rgba(83, 22, 22, 0.312) 1px solid;
-            color : rgb(83, 22, 22);
+            color : rgb(83, 22, 22) !important;
         }
     }
 
@@ -206,7 +206,7 @@
 .buttonDelete{
     padding: 4px 8px;
     background-color: rgb(147, 13, 13);
-    color: white !important;
+    color: white;
     font-weight: bold;
     border: none;
     border-radius: 4px;

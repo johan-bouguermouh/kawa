@@ -1,16 +1,29 @@
 <article class="form">
 
-    <section class="alert">
-        <?php if (isset($_SESSION['flash'])) : ?>
-            <?php foreach ($_SESSION['flash'] as $type => $message) : ?>
-                <p class="alert__message"><?= $message; ?></p>
-            <?php endforeach; ?>
-        <?php endif; ?>
+    <?php if(isset($_SESSION['flash'])) :?>
 
-        <?php if (isset($_SESSION['flash'])) :  ?>
-            <?php unset($_SESSION['flash']) ?>
-        <?php endif; ?>
-    </section>
+        <?php if(isset($_SESSION['flash']['sucess']))
+        {
+            $alert = "alert alert--success";
+            }
+            else{
+            $alert = "alert";
+            }?>
+
+        <section class="<?=$alert?>">
+            <?php if (isset($_SESSION['flash'])) : ?>
+                <?php foreach ($_SESSION['flash'] as $type => $message) : ?>
+                    <p class="alert__message"><?= $message; ?></p>
+                <?php endforeach; ?>
+            <?php endif; ?>
+    
+            <?php if (isset($_SESSION['flash'])) :  ?>
+                <?php unset($_SESSION['flash']) ?>
+            <?php endif; ?>
+        </section>
+        
+    <?php endif; ?>
+
 
     <form class="form__container" action="#" method="post">
 

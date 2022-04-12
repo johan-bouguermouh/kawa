@@ -1,8 +1,16 @@
 .mainProfil {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 32px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 450px);
+    padding: 32px 0;
+    form {
+        background-color: white;
+        padding: 5%;
+    }
+}
+
+.title__profil {
+  color: #135e4c;
 }

@@ -60,10 +60,10 @@ extract($controller->index());
 
       </form>
       <a href="./livraison"> <button class="form__button">retour</button></a>
-      <!--      <div id="errors"></div>
+      <div id="errors"></div>
       <script src="https://js.stripe.com/v3/"></script>
       <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
-      <script src="script.js"></script> -->
+      <script src="script.js"></script>
 
     </div>
 

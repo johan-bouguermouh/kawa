@@ -1,25 +1,20 @@
 <article class="mainAndSideAdmin">
     <section class="sideBarreAcount">
         <div>
-            <h2>Profil</h2>
+            <h1>Profil</h1>
             <ul>
-                <li><a href="/../boutique-en-ligne/profil/modifierMotdePasse">Modifier mon mot de passe</a></li>
-                <li><a href="/../boutique-en-ligne/profil/adresse">Adresse de livraison</a></li>
-                <li><a href="/../boutique-en-ligne/profil/historiqueCommande">Historique de commande</a></li>
-                <li><a href="/../boutique-en-ligne/deconnexion">Se deconnecter</a></li>
+                <li><a href="">Modifier mon profil</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/modifierMotdePasse">Modifier mon mot de passe</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/adresse">Adresse de livraison</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/historiqueCommande">Historique de commande</a><i class="fa-solid fa-angle-right"></i></li>
+                <li><a href="/../boutique-en-ligne/profil/deconnexion">Se deconnecter</a></li>
             </ul>
         </div>
-        <?php if ($notifAdresse !== null) : ?>
-            <section>
-                <p><?= $notifAdresse ?></p>
-                <a href="./adresse">Enregistrer une adresse ></a>
-            </section>
-        <?php endif; ?>
     </section>
 
 
     <section class="mainProfil">
-        <img src="public/img/Icon_Profil-test.png" alt="profil picture">
+        <img src="../public/img/Icon_Profil-test.png" alt="profil picture">
         <h1><?= ucfirst(@$_SESSION['user']['prenom']) . ' ' . ucfirst(@$_SESSION['user']['nom']); ?></h1>
         <p><?= @$_SESSION['user']['email'] ?></p>
         <article class="form">
@@ -36,7 +31,7 @@
 
             <form class="form__container" action="#" method="post">
 
-                <h1 class="form__title">Modifier mon Profil</h1>
+                <h1 class="form__title title__profil">Modifier mon Profil</h1>
 
                 <div class="form__field">
                     <label for="email" class="form__label">Email : </label>

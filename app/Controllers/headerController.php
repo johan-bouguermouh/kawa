@@ -17,7 +17,7 @@ elseif($_SESSION['user']['role']=='Utilisateurs')
     $userPath = '/boutique-en-ligne/profil';
     if($adresse->getAdress()==null)
     {
-        $iconUser = '<i class="fa-solid fa-user"></i>'.'<i class="fa-solid fa-bell"></i>';
+        $iconUser = '<i class="fa-solid fa-user"></i>'.'<i id="notifOne" class="fa-solid fa-bell"></i>';
     }
     else $iconUser = '<i class="fa-solid fa-user"></i>';
 }
