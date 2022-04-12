@@ -864,7 +864,8 @@ h1 {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 
-.poductPanier, .footerPanier {
+.poductPanier,
+.footerPanier {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1051,8 +1052,8 @@ h1 {
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-  -webkit-transition: margin-left .5s;
-  transition: margin-left .5s;
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
   padding: 20px;
 }
 
@@ -1091,6 +1092,12 @@ h1 {
 @media screen and (min-device-width: 1024px) {
   .sidenav:target {
     width: 450px;
+  }
+}
+
+@media screen and (max-device-width: 1024px) {
+  .sidenav:target {
+    width: 100%;
   }
 }
 
@@ -1914,7 +1921,7 @@ h1 {
 */
 .sideBarreAdmin {
   width: 100%;
-  min-width: 400px;
+  min-width: 375px;
   height: auto;
   min-height: 92vh;
   padding: 32px;
@@ -2911,7 +2918,7 @@ h1 {
 }
 
 .historique__field {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 16px;
 }
@@ -2928,6 +2935,14 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media only screen and (max-device-width: 800px) {
+  .mainAndSideAdmin.commande {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .mainUpdateProduct {
@@ -3488,6 +3503,12 @@ h1 {
 
 .title__profil {
   color: #135e4c;
+}
+
+@media only screen and (min-device-width: 1024px) {
+  .mainProfil {
+    width: 100%;
+  }
 }
 
 .order {

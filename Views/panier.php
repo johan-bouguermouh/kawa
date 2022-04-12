@@ -1,8 +1,9 @@
 <?php
-require_once './app/controllers/ShoppingCartController.php';
+/* require_once './app/controllers/ShoppingCartController.php'; */
 
+use App\controllers\ShoppingCartController;
 
-$controller = new App\Controllers\ShoppingCartController();
+$controller = new ShoppingCartController();
 
 $controller->upValue();
 $controller->downValue();

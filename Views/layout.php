@@ -20,7 +20,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="https://use.typekit.net/gij8hzs.css">
     <link rel="stylesheet" href="/boutique-en-ligne/public/style/main.css">
     <script type="text/javaScript" src="/boutique-en-ligne/public/js/menuAdmin.js"></script>
-    <script type="text/javaScript" src="/boutique-en-ligne/public/js/panier.js"></script>
+
     <script type="text/javaScript" src="/boutique-en-ligne/public/js/search.js"></script>
     <script type="text/javaScript" src="/boutique-en-ligne/public/js/carousel.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,7 +35,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php require_once 'header.php'; ?>
     </header>
     <main>
-        
+
         <?= $pageContent ?>
     </main>
     <footer>

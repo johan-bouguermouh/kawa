@@ -11,7 +11,7 @@
         }
     }
     &__field {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
         padding: 16px;
     }
@@ -22,5 +22,11 @@
             display: flex;
             justify-content: space-evenly;
         }
+    }
+}
+
+@media only screen and (max-device-width: 800px) {
+    .mainAndSideAdmin.commande {
+        justify-content: center;
     }
 }

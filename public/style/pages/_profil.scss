@@ -12,5 +12,11 @@
 }
 
 .title__profil {
-  color: #135e4c;
+    color: #135e4c;
+}
+
+@media only screen and (min-device-width: 1024px) {
+    .mainProfil {
+        width: 100%;
+    }
 }

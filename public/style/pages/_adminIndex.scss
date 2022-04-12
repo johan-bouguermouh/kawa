@@ -1,6 +1,6 @@
 .sideBarreAdmin {
     width: 100%;
-    min-width: 400px;
+    min-width: 375px;
     height: auto;
     min-height: 92vh;
     padding: 32px;
@@ -53,7 +53,8 @@
         margin-top: 8px;
     }
 }
-.imgIndexAcount{
+
+.imgIndexAcount {
     display: none;
 }
 
@@ -62,12 +63,13 @@
         width: 450px;
     }
 }
+
 @media only screen and (min-device-width: 1024px) {
-    .imgIndexAcount{
+    .imgIndexAcount {
         display: initial;
         width: 70%;
     }
-    .acountIndexMain{
+    .acountIndexMain {
         width: calc(100vw - 400px);
         display: flex;
         justify-content: center;

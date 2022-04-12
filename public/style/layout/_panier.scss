@@ -1,185 +1,204 @@
-.poductPanier,.footerPanier{
-  display: flex;
-  width: 100%;
-  border-top: 1px solid #a7a7a7;
-  padding: 8px 0px;
+.poductPanier,
+.footerPanier {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #a7a7a7;
+    padding: 8px 0px;
 }
 
-.footerPanier{
-  font-size: 1.6rem;
-  justify-content: space-between;
+.footerPanier {
+    font-size: 1.6rem;
+    justify-content: space-between;
     font-size: 2rem;
     color: #135e4c;
     font-weight: bold;
-  & input{
-    background-color: #135e4c;
-    color: white;
-    border-radius: 4px;
-    padding: 8px 16px;
-    border: none;
-    margin-top: 8px;
-    &:hover{
-      background-color: #1d3f36;
+    & input {
+        background-color: #135e4c;
+        color: white;
+        border-radius: 4px;
+        padding: 8px 16px;
+        border: none;
+        margin-top: 8px;
+        &:hover {
+            background-color: #1d3f36;
+        }
     }
-  }
-}
-.infoPanier{
-  font-size: 1.7rem;
-  width: 100%;
-}
-.firstInfoPanier{
-  color: #424242;
-  display: flex;
-  font-weight: bold;
-  width: 100%;
-  & p:last-child{
-    display: none;
-    margin-left: auto;
-  }
 }
 
-.picturePanier{
-  width: 40%;
-  max-width: 150px;
-  height: 40%;
-  max-height: 150px;
-  margin-right: 16px;
-  border-radius: 4px;
+.infoPanier {
+    font-size: 1.7rem;
+    width: 100%;
 }
 
-.selectQuatity{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  & div:first-child{
-    
+.firstInfoPanier {
+    color: #424242;
     display: flex;
-
-    & button{
-      color: white;
-      font-size: 2rem;
-      background-color: #135e4c;
-      width: 30px;
-      height: 50px;
-      border: none;
-      cursor: pointer;
-      &:hover{
-        background-color: #1d3f36;
-      }
+    font-weight: bold;
+    width: 100%;
+    & p:last-child {
+        display: none;
+        margin-left: auto;
     }
+}
 
-    & .buttonPanierDown{
-      order: -1;
-      border-radius: 4px 0px 0px 4px;
+.picturePanier {
+    width: 40%;
+    max-width: 150px;
+    height: 40%;
+    max-height: 150px;
+    margin-right: 16px;
+    border-radius: 4px;
+}
+
+.selectQuatity {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    & div:first-child {
+        display: flex;
+        & button {
+            color: white;
+            font-size: 2rem;
+            background-color: #135e4c;
+            width: 30px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: #1d3f36;
+            }
+        }
+        & .buttonPanierDown {
+            order: -1;
+            border-radius: 4px 0px 0px 4px;
+        }
+        & .buttonPanierUp {
+            order: 3;
+            border-radius: 0px 4px 4px 0px;
+        }
+        &>div {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            border-top: #135e4c solid 1px;
+            border-bottom: #135e4c solid 1px;
+            & p {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
-
-    & .buttonPanierUp{
-      order: 3;
-      border-radius: 0px 4px 4px 0px;
-    }
-
-    & >div{
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      vertical-align: middle;
-      border-top: #135e4c solid 1px;
-      border-bottom: #135e4c solid 1px;
-      & p{
+    & form:last-child {
+        display: none;
         margin: 0;
         padding: 0;
-      }
+        order: -1;
+        & button {
+            border: none;
+            color: #818181;
+        }
     }
-  }
-
-  & form:last-child{
-    display: none;
-    margin: 0;
-    padding: 0;
-    order: -1;
-    & button{
-      border: none;
-      color: #818181;
-    }
-  }
 }
+
 .sidenav {
-    
     z-index: 99;
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    top: 0;
+    /* Stay at the top */
     right: 0;
     box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 0.95); /* Black*/
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Black*/
     backdrop-filter: blur(5px);
-    overflow: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    &:target{
-      overflow-y: scroll;
-      width: 100%;
-      z-index: 99;
-      padding: 64px 32px 64px 32px; /* Place content 60px from the top */
+    overflow: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    &:target {
+        overflow-y: scroll;
+        width: 100%;
+        z-index: 99;
+        padding: 64px 32px 64px 32px;
+        /* Place content 60px from the top */
     }
-  }
-  
-  /* The navigation menu links */
-  // .sidenav > p, form {
-  //   padding: 8px 32px;
-  //   text-decoration: none;
-  //   font-size: 25px;
-  //   color: #818181;
-  //   display: block;
-  //   transition: 0.3s;
-  // }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
+}
+
+
+/* The navigation menu links */
+
+// .sidenav > p, form {
+//   padding: 8px 32px;
+//   text-decoration: none;
+//   font-size: 25px;
+//   color: #818181;
+//   display: block;
+//   transition: 0.3s;
+// }
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left .5s;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left 0.5s;
     padding: 20px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+}
 
-  @media screen and (min-device-width : 450px) {
-    .selectQuatity form:last-child{
-      display: initial;
-    }
 
-    .firstInfoPanier p:last-child{
-      display: initial;
-    }
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
-    .infoPanier{
-      max-height: 167px;
-      display: flex;
-      flex-direction: column;
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
     }
-    .selectQuatity{
-      margin-top: auto;
+    .sidenav a {
+        font-size: 18px;
     }
-  }
+}
 
-  @media screen and (min-device-width : 1024px){
-    .sidenav:target{
-      width: 450px;
+@media screen and (min-device-width: 450px) {
+    .selectQuatity form:last-child {
+        display: initial;
     }
-  }
+    .firstInfoPanier p:last-child {
+        display: initial;
+    }
+    .infoPanier {
+        max-height: 167px;
+        display: flex;
+        flex-direction: column;
+    }
+    .selectQuatity {
+        margin-top: auto;
+    }
+}
+
+@media screen and (min-device-width: 1024px) {
+    .sidenav:target {
+        width: 450px;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    .sidenav:target {
+        width: 100%;
+    }
+}
