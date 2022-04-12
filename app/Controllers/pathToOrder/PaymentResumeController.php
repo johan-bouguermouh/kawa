@@ -6,8 +6,8 @@ namespace App\Controllers\pathToOrder;
 
 use Exception;
 
-use App\Models\Commandes;
-use App\Controllers\Controller;
+use App\models\Commandes;
+use App\controllers\Controller;
 
 class PaymentResumeController extends Controller
 {

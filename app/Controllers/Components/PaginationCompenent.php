@@ -1,10 +1,10 @@
 <?php
-namespace App\Controllers\Components;
 
-Class PaginationCompenent
+namespace App\controllers\Components;
+
+class PaginationCompenent
 {
-    public function pagination(int $folio,array $haystack)
+    public function pagination(int $folio, array $haystack)
     {
-
     }
 }

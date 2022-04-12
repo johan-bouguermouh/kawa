@@ -2,7 +2,7 @@
 
 namespace Exceptions;
 
-namespace App\Controllers\Exceptions;
+namespace App\controllers\Exceptions;
 
 use Exception;
 use Throwable;

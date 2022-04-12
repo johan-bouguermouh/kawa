@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\controllers\admin;
 
-use App\Controllers\Controller;
+use App\controllers\Controller;
 
-use Database\DBConnection;
-use App\Controllers\Components\ProductComponent;
-use App\Controllers\Components\CategoriesComponent;
+/* use Database\DBConnection; */
+use App\controllers\components\ProductComponent;
+use App\controllers\components\CategoriesComponent;
 
 class AdminUpdateProductController extends Controller
 {
@@ -52,7 +52,7 @@ class AdminUpdateProductController extends Controller
 
             $product = $this->Product->find(['id_article'], [':id_article' => $id_article])[0];
 
-            if(!empty($_POST['deleteProductAdmin'])&& $_POST['deleteProductAdmin'] == 'on'){
+            if (!empty($_POST['deleteProductAdmin']) && $_POST['deleteProductAdmin'] == 'on') {
                 $this->Product->delete([':id_article' => $id_article]);
                 $product = null;
             }

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Controllers;
+namespace App\controllers;
 
 
-use App\Models\Articles;
+use App\models\Articles;
 
 
 class ShoppingCartController extends Controller

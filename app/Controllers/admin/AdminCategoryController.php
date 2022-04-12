@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\controllers\admin;
 
-use App\Controllers\Controller;
+use App\controllers\Controller;
 
-use App\Models\Categories;
+use App\models\Categories;
 
 class AdminCategoryController extends Controller
 {

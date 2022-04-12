@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\forgetpassword;
+namespace App\controllers\forgetpassword;
 
-use App\Controllers\Controller;
+use App\controllers\Controller;
 
-use App\Models\Utilisateurs;
+use App\models\Utilisateurs;
 
 class checkEmailController extends Controller
 {

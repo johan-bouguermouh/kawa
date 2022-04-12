@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers;
+namespace App\controllers;
 
 class DeconnexionController extends Controller
 {
@@ -9,4 +9,3 @@ class DeconnexionController extends Controller
     $this->view('profil.deconnexion', compact('title'));
     }
 }
-?>

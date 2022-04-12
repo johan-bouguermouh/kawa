@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers;
+namespace App\controllers;
 
 
 class Security
@@ -39,9 +39,9 @@ class Security
             // }
             // Pour tous les autres types
             // else {
-                $compact  = strip_tags($compact);
-                $compact = htmlentities($compact);
-                $compact = htmlspecialchars($compact);
+            $compact  = strip_tags($compact);
+            $compact = htmlentities($compact);
+            $compact = htmlspecialchars($compact);
             // }
             return $compact; //On retourne le resultat sous forme de int ou String
         }
@@ -57,31 +57,25 @@ class Security
                 // }
                 // Pour tous les autres types
                 // else {
-                    if(is_array($value))
-                    {
-                        foreach($value as $underKey => $undervalue)
-                        {
-                            if (ctype_digit($undervalue)) {
-                                $undervalue = intval($undervalue);
-                            }
-                            else{
+                if (is_array($value)) {
+                    foreach ($value as $underKey => $undervalue) {
+                        if (ctype_digit($undervalue)) {
+                            $undervalue = intval($undervalue);
+                        } else {
                             $undervalue  = strip_tags($undervalue);
                             $undervalue = htmlentities($undervalue);
                             $undervalue = htmlspecialchars($undervalue);
-                            }
                         }
                     }
-                    else
-                    {
-                        if (ctype_digit($value)) {
-                            $value = intval($value);
-                        }
-                        else{
+                } else {
+                    if (ctype_digit($value)) {
+                        $value = intval($value);
+                    } else {
                         $value  = strip_tags($value);
                         $value = htmlentities($value);
                         $value = htmlspecialchars($value);
-                        }
                     }
+                }
                 // }
             }
         } else {

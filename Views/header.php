@@ -1,4 +1,4 @@
-<?php require 'app/Controllers/headerController.php' ?>
+<?php require 'app/controllers/headerController.php' ?>
 
 <nav class="nav">
 

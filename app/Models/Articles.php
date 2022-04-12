@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\models;
 
-use Database\DBConnection;
+/* use Database\DBConnection; */
 
 
 class Articles extends Model

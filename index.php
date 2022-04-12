@@ -1,10 +1,10 @@
 <?php session_start();
 // error_reporting(0);
 
-use App\Controllers\Security;
+use App\controllers\Security;
 use Exceptions\NotFoundException;
 
-require_once 'app/Controllers/Security.php';
+require_once 'app/controllers/Security.php';
 
 //Control d'accée à l'url
 $urlControlUser = $_SERVER['REQUEST_URI'];
@@ -54,7 +54,7 @@ define('VIEWS', __DIR__ . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 
 
 define('REDIRECT', __DIR__ . DIRECTORY_SEPARATOR . 'Views' . DIRECTORY_SEPARATOR . 'shop' . DIRECTORY_SEPARATOR . 'livraison.php');
 
-define('ERROR', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'pictures' . DIRECTORY_SEPARATOR .'kawa_loading_blanc.gif');
+define('ERROR', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'pictures' . DIRECTORY_SEPARATOR . 'kawa_loading_blanc.gif');
 
 
 function error($param)
@@ -81,7 +81,7 @@ $router->map(
     'GET|POST',
     '/inscription',
     function () {
-        $controller = new App\Controllers\InscriptionController();
+        $controller = new App\controllers\InscriptionController();
         $controller->index();
         $controller->SignUp();
     },
@@ -91,7 +91,7 @@ $router->map(
     'GET|POST',
     '/connexion',
     function () {
-        $controller = new App\Controllers\ConnexionController();
+        $controller = new App\controllers\ConnexionController();
         $controller->index();
         $controller->login();
     },
@@ -101,7 +101,7 @@ $router->map(
     'GET|POST',
     '/checkemail',
     function () {
-        $controller = new App\Controllers\forgetpassword\checkEmailController();
+        $controller = new App\controllers\forgetpassword\checkEmailController();
         $controller->index();
         $controller->checkLogin();
     },
@@ -114,7 +114,7 @@ $router->map(
     '/resetpassword',
     function () {
 
-        $controller = new App\Controllers\forgetpassword\resetPasswordController();
+        $controller = new App\controllers\forgetpassword\resetPasswordController();
         $controller->index();
         $controller->resetPassword();
     },
@@ -126,7 +126,7 @@ $router->map(
     'GET|POST',
     '/profil',
     function () {
-        $controller = new App\Controllers\User\ProfilController();
+        $controller = new App\controllers\User\ProfilController();
         $controller->index();
     },
 );
@@ -135,7 +135,7 @@ $router->map(
     'GET|POST',
     '/profil/modifierMotdePasse',
     function () {
-        $controller = new App\Controllers\User\ModifierPasswordController();
+        $controller = new App\controllers\User\ModifierPasswordController();
         $controller->index();
         $controller->updatePassword();
     },
@@ -145,7 +145,7 @@ $router->map(
     'GET|POST',
     '/profil/modifierProfil',
     function () {
-        $controller = new App\Controllers\User\ModifierProfilController();
+        $controller = new App\controllers\User\ModifierProfilController();
         $controller->index();
         $controller->updateProfil();
     },
@@ -155,7 +155,7 @@ $router->map(
     'GET|POST',
     '/profil/adresse',
     function () {
-        $controller = new App\Controllers\User\AdresseController();
+        $controller = new App\controllers\User\AdresseController();
         $controller->index();
         $controller->getAdress();
         $controller->create();
@@ -166,7 +166,7 @@ $router->map(
     'GET|POST',
     '/profil/adresse/modifierAdresse/[i:id_adresse]',
     function ($id_adresse) {
-        $controller = new App\Controllers\User\ModifierAdresseController();
+        $controller = new App\controllers\user\ModifierAdresseController();
         $controller->index($id_adresse);
         $controller->updateAdresse($id_adresse);
         $controller->getAdressebyId($id_adresse);
@@ -178,7 +178,7 @@ $router->map(
     'GET|POST',
     '/profil/adresse/creerAdresse',
     function () {
-        $controller = new App\Controllers\User\CreerAdresseController();
+        $controller = new App\controllers\user\CreerAdresseController();
         $controller->index();
         $controller->createAdresse();
     },
@@ -188,7 +188,7 @@ $router->map(
     'GET|POST',
     '/profil/historiqueCommande',
     function () {
-        $controller = new App\Controllers\User\HistoriqueController();
+        $controller = new App\controllers\user\HistoriqueController();
         $controller->index();
         // $controller->getCommande();
     },
@@ -198,7 +198,7 @@ $router->map(
     'GET|POST',
     '/profil/historiqueCommande/commande/[i:id_num_commande]',
     function ($id_num_commande) {
-        $controller = new App\Controllers\User\CommandeController();
+        $controller = new App\controllers\user\CommandeController();
         $controller->index($id_num_commande);
 
         // $controller->getCommandebyId($id_commande);
@@ -215,7 +215,7 @@ $router->map(
     'GET',
     '/search',
     function () {
-        $controller = new App\Controllers\SearchController();
+        $controller = new App\controllers\SearchController();
         $controller->index();
     },
     'search'
@@ -225,7 +225,7 @@ $router->map(
     'GET|POST',
     '/profil/deconnexion',
     function () {
-        $controller = new App\Controllers\DeconnexionController();
+        $controller = new App\controllers\DeconnexionController();
         $controller->index();
     },
     'deconnexion'
@@ -242,7 +242,7 @@ $router->map(
     'GET|POST',
     '/admin/creerArticle/[*:param]',
     function ($param) {
-        $controller = new App\Controllers\admin\AdminCreateProductController();
+        $controller = new App\controllers\admin\AdminCreateProductController();
         $controller->CreatProduct($param);
     },
     'creat product'
@@ -252,7 +252,7 @@ $router->map(
     'GET|POST',
     '/admin',
     function () {
-        $controller = new App\Controllers\admin\AdminCreateProductController();
+        $controller = new App\controllers\admin\AdminCreateProductController();
         $controller->index();
     },
     'Admin index'
@@ -262,7 +262,7 @@ $router->map(
     'GET|POST',
     '/admin/modifierArticle/[*:id_article]',
     function ($id_article) {
-        $controller = new App\Controllers\admin\AdminUpdateProductController();
+        $controller = new App\controllers\admin\AdminUpdateProductController();
         $controller->index($id_article);
     },
     'update product'
@@ -272,7 +272,7 @@ $router->map(
     'GET|POST',
     '/admin/gestiondestock',
     function () {
-        $controller = new App\Controllers\admin\AdminUpdateSkuController();
+        $controller = new App\controllers\admin\AdminUpdateSkuController();
         $controller->index();
     },
     'gestion de stock'
@@ -282,7 +282,7 @@ $router->map(
     'GET|POST',
     '/admin/gestionUtilisateur/[*:param]',
     function ($param) {
-        $controller = new App\Controllers\admin\AdminUpdateUserController();
+        $controller = new App\controllers\admin\AdminUpdateUserController();
         $controller->index($param);
         $controller->getUser($param);
         $controller->deleteUser($param);
@@ -294,7 +294,7 @@ $router->map(
     'GET|POST',
     '/admin/validercommande',
     function () {
-        $controller = new App\Controllers\admin\AdminOrderController();
+        $controller = new App\controllers\admin\AdminOrderController();
         $controller->index();
         $controller->update();
     },
@@ -305,7 +305,7 @@ $router->map(
     'GET|POST',
     '/admin/detail/[i:id]',
     function ($id) {
-        $controller = new App\Controllers\admin\AdminOrderController();
+        $controller = new App\controllers\admin\AdminOrderController();
         $controller->indexResume($id);
     },
 
@@ -316,7 +316,7 @@ $router->map(
     'GET',
     '/admin/categorie',
     function () {
-        $controller = new App\Controllers\admin\AdminCategoryController();
+        $controller = new App\controllers\admin\AdminCategoryController();
         $controller->index();
     },
 
@@ -326,7 +326,7 @@ $router->map(
     'POST',
     '/admin/categorie',
     function () {
-        $controller = new App\Controllers\admin\AdminCategoryController();
+        $controller = new App\controllers\admin\AdminCategoryController();
         $controller->update();
         $controller->create();
         $controller->delete();
@@ -340,7 +340,7 @@ $router->map(
     'GET/POST',
     '/admin/commentaire',
     function () {
-        $controller = new App\Controllers\admin\AdminCommentController();
+        $controller = new App\controllers\admin\AdminCommentController();
         $controller->update();
         $controller->create();
         $controller->delete();
@@ -361,7 +361,7 @@ $router->map(
     'POST/GET',
     '/admin/tag',
     function () {
-        $controller = new App\Controllers\admin\AdminTagController();
+        $controller = new App\controllers\admin\AdminTagController();
         $controller->update();
         $controller->create();
         $controller->delete();
@@ -380,7 +380,7 @@ $router->map(
     'GET|POST',
     '/produit/[*:id_article]',
     function ($id_article) {
-        $controller = new App\Controllers\ProductController();
+        $controller = new App\controllers\ProductController();
         $controller->index($id_article);
         $controller->shoppingBag();
         $controller->pushAnswerCom($id_article);
@@ -396,7 +396,7 @@ $router->map(
     'GET|POST',
     '/boutique/[*:param]',
     function ($param) {
-        $controller = new App\Controllers\BoutiqueSearchController();
+        $controller = new App\controllers\BoutiqueSearchController();
         $controller->index($param);
     }
 );
@@ -413,7 +413,7 @@ $router->map(
     'GET/POST',
     '/livraison',
     function () {
-        $controller = new App\Controllers\pathToOrder\LivraisonController();
+        $controller = new App\controllers\pathToOrder\LivraisonController();
         $controller->index();
         $controller->fieldCheck();
         $controller->adressCheck();
@@ -428,7 +428,7 @@ $router->map(
     'GET/POST',
     '/paiement',
     function () {
-        $controller = new App\Controllers\pathToOrder\PaymentController();
+        $controller = new App\controllers\pathToOrder\PaymentController();
         $controller->index();
         $controller->payment();
         $controller->stripe();
@@ -442,7 +442,7 @@ $router->map(
     'GET/POST',
     '/paiementResume',
     function () {
-        $controller = new App\Controllers\pathToOrder\PaymentResumeController();
+        $controller = new App\controllers\pathToOrder\PaymentResumeController();
         $controller->index();
     },
     'paiementResume'

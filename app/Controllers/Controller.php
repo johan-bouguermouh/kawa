@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Database\DBConnection;
+/* use Database\DBConnection; */
 
 abstract class Controller
 {

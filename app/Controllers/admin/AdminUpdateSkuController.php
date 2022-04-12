@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\controllers\admin;
 
-use App\Controllers\Controller;
+use App\controllers\Controller;
 
-use Database\DBConnection;
-use App\Controllers\Components\ProductComponent;
-use App\Controllers\Components\CategoriesComponent;
-use App\Models\Product;
+/* use Database\DBConnection; */
+use App\controllers\components\ProductComponent;
+use App\controllers\components\CategoriesComponent;
+use App\models\Product;
 
 class AdminUpdateSkuController extends Controller
 {

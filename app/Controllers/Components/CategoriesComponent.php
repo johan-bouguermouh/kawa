@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers\Components;
+namespace App\controllers\Components;
 
-use App\Models\Categories;
+use App\models\Categories;
 
 class CategoriesComponent extends Categories
 {
@@ -10,7 +10,7 @@ class CategoriesComponent extends Categories
     {
         parent::__construct();
     }
-    
+
     /**
      * Renvoie l'ensemble des données selon le nom de la section
      * @param array Ensemble des critères à chercher
@@ -24,7 +24,7 @@ class CategoriesComponent extends Categories
         return $item;
     }
 
-    
+
 
     /**
      * Récupère le nom d'une catégorie par son Id

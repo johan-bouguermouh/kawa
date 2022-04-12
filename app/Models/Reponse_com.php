@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\models;
 
-use App\Models\Model;
+use App\models\Model;
 
 
 class Reponse_com extends Model

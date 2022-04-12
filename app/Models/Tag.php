@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\models;
 
-use App\Models\Model;
+use App\models\Model;
 use Database\DBConnection;
 
 

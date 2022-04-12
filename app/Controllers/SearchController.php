@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\controllers;
 
-use App\Models\Search;
+use App\models\Search;
 
 class SearchController extends Controller
 {

@@ -2,11 +2,11 @@
 
 namespace App\Controllers\admin;
 
-use App\Models\Commandes;
+use App\models\Commandes;
 
-use App\Models\Livraison;
-use App\Models\NumCommande;
-use App\Controllers\Controller;
+use App\models\Livraison;
+use App\models\NumCommande;
+use App\controllers\Controller;
 
 class AdminOrderController extends Controller
 {

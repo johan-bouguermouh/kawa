@@ -1,5 +1,5 @@
 <?php
-require_once './app/Controllers/ShoppingCartController.php';
+require_once './app/controllers/ShoppingCartController.php';
 
 
 $controller = new App\Controllers\ShoppingCartController();

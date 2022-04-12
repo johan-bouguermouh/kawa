@@ -2,10 +2,10 @@
 
 namespace App\Controllers\admin;
 
-use App\Controllers\Controller;
+use App\controllers\Controller;
 
-use App\Controllers\Components\ProductComponent;
-use App\Controllers\Components\CategoriesComponent;
+use App\controllers\components\ProductComponent;
+use App\controllers\components\CategoriesComponent;
 
 class AdminCreateProductController extends Controller
 {

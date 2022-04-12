@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models;
+namespace App\models;
 
-use App\Models\Model;
+use App\models\Model;
 use Database\DBConnection;
 
 
@@ -106,20 +106,17 @@ class Categories extends Model
      * @param ,Id du produit
      * @param string ,[Optionnel] Permet de spécifier la section a recupérer
      */
-    public function getSectionCatByIdProduct($fk_id_article,?string $section = null)
+    public function getSectionCatByIdProduct($fk_id_article, ?string $section = null)
     {
-        if($section !== null)
-        {
+        if ($section !== null) {
             $add = " AND `categories`.`section`= :section;";
-            $compact = compact('fk_id_article','section');
-        }
-        else
-        {
+            $compact = compact('fk_id_article', 'section');
+        } else {
             $add = null;
             $compact = compact('fk_id_article');
         }
 
-        $req ="SELECT `categories`.`nom_categorie`, `categories`.`id_categorie`, `categories`.`section`
+        $req = "SELECT `categories`.`nom_categorie`, `categories`.`id_categorie`, `categories`.`section`
         FROM `articles_categories_filtre` AS `intermediaire`
         INNER JOIN `categories` ON `intermediaire`.`fk_id_cat_categorie` = `categories`.`id_categorie`
         WHERE `intermediaire`.`fk_id_article`= :fk_id_article
@@ -138,7 +135,7 @@ class Categories extends Model
      */
     public function selectMainCatOfProduct($fk_id_article)
     {
-        $req="SELECT `categories`.`nom_categorie`, `categories`.`id_categorie`
+        $req = "SELECT `categories`.`nom_categorie`, `categories`.`id_categorie`
         FROM `articles_categories_filtre`AS `intermediaire`
         INNER JOIN `categories` ON `intermediaire`.`id_parent` = `categories`.`id_categorie`
         WHERE `intermediaire`.`fk_id_article`= :fk_id_article
@@ -151,10 +148,10 @@ class Categories extends Model
      * @param ,id article
      * @param ,id catégorie
      */
-    public function deleteCatOfProduct($fk_id_article,$fk_id_cat_categorie)
+    public function deleteCatOfProduct($fk_id_article, $fk_id_cat_categorie)
     {
         $req = "DELETE FROM `articles_categories_filtre` WHERE fk_id_cat_categorie  = :fk_id_cat_categorie  AND fk_id_article = :fk_id_article;";
-        return $this->requete($req, compact('fk_id_article','fk_id_cat_categorie'));
+        return $this->requete($req, compact('fk_id_article', 'fk_id_cat_categorie'));
     }
 
     /**
@@ -165,7 +162,7 @@ class Categories extends Model
     public function updateMainCatOfProduct($fk_id_article, $id_parent)
     {
         $req = "UPDATE  `articles_categories_filtre` SET `id_parent`= :id_parent WHERE `fk_id_article`= :fk_id_article;";
-        return $this->requete($req, compact('fk_id_article','id_parent'));
+        return $this->requete($req, compact('fk_id_article', 'id_parent'));
     }
     /**
      * Modifie l'id de la categorie enfante de la ligne associé à la force
@@ -173,11 +170,11 @@ class Categories extends Model
      * @param ,id de la categorie de la force précédente
      * @param ,id de la categorie de la nouvelle force
      */
-    public function updateStrenghtOfproduct($fk_id_article,$fk_id_cat_categorie, $new_id)
+    public function updateStrenghtOfproduct($fk_id_article, $fk_id_cat_categorie, $new_id)
     {
         $req = "UPDATE  `articles_categories_filtre` SET `fk_id_cat_categorie`= :new_id
         WHERE `fk_id_cat_categorie`= :fk_id_cat_categorie
         AND `fk_id_article`= :fk_id_article;";
-        return $this->requete($req, compact('fk_id_article','fk_id_cat_categorie','new_id'));
+        return $this->requete($req, compact('fk_id_article', 'fk_id_cat_categorie', 'new_id'));
     }
 }

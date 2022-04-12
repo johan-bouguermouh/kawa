@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controllers\Components;
+namespace App\controllers\Components;
 
 use Database\DBConnection;
-use App\Models\Product;
+use App\models\Product;
 
 class ProductComponent extends Product
 {

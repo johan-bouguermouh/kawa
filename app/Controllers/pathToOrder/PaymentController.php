@@ -2,20 +2,20 @@
 
 
 
-namespace App\Controllers\pathToOrder;
+namespace App\controllers\pathToOrder;
 
 use Exception;
 use Throwable;
 
 use Stripe\Stripe;
-use App\Models\Articles;
-use App\Models\Commandes;
-use App\Models\Livraison;
+use App\models\Articles;
+use App\models\Commandes;
+use App\models\Livraison;
 use Stripe\PaymentIntent;
 use Database\DBConnection;
-use App\Models\NumCommande;
-use App\Controllers\Security;
-use App\Controllers\Controller;
+use App\models\NumCommande;
+use App\controllers\Security;
+use App\controllers\Controller;
 
 class PaymentController extends Controller
 {

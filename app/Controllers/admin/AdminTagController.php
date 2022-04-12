@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\controllers\admin;
 
-use App\Controllers\Controller;
+use App\controllers\Controller;
 
-use App\Models\Tag;
+use App\models\Tag;
 
 class AdminTagController extends Controller
 {

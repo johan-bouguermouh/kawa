@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controllers\admin;
+namespace App\controllers\admin;
 
 use Exception;
 
-use App\Models\Articles;
-use App\Models\Reponse_com;
-use App\Models\Commentaires;
-use App\Controllers\Controller;
+use App\models\Articles;
+use App\models\Reponse_com;
+use App\models\Commentaires;
+use App\controllers\Controller;
 
 class AdminCommentController extends Controller
 {

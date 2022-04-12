@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers;
+namespace App\controllers;
 
-use App\Controllers\Components\CardCompenent;
-use App\Models\Product;
-use App\Models\Articles;
+use App\controllers\components\CardCompenent;
+use App\models\Product;
+use App\models\Articles;
 
 
 class MainController extends Controller

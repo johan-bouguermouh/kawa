@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Utilisateurs;
+use App\models\Utilisateurs;
 
 class ConnexionController extends Controller
 {

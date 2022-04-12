@@ -1,5 +1,5 @@
 <?php
-require_once './app/Controllers/ShoppingCartController.php';
+require_once './app/controllers/ShoppingCartController.php';
 if (!isset($_SESSION['user'])) {
   header('Location: /boutique-en-ligne/');
 }

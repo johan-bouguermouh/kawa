@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Controllers;
+namespace App\controllers;
 
-use App\Models\Categories;
-use App\Models\Product;
-use App\Models\Commentaires;
-use App\Models\Like;
-use App\Models\Reponse_com;
+use App\models\Categories;
+use App\models\Product;
+use App\models\Commentaires;
+use App\models\Like;
+use App\models\Reponse_com;
 
 class ProductController extends Controller
 {
