@@ -35,7 +35,7 @@ if ($pathControl[2] == 'profil' && empty($_SESSION['user'])) {
     echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="' . $pathControl[0] . '/' . $pathControl[1] . '/connexion" </SCRIPT>'; //force la direction 
 }
 if (($pathControl[2] == 'connexion' && !empty($_SESSION['user'])) || ($pathControl[2] == 'inscription' && !empty($_SESSION['user']))) {
-    echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="../boutique-en-ligne/"</SCRIPT>'; //force la direction 
+    echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="../kawa/"</SCRIPT>'; //force la direction 
 }
 
 //Sécurité de tout les formulaire Get|POST
@@ -67,7 +67,7 @@ function error($param)
 
 
 $router = new AltoRouter();
-$router->setBasePath('/boutique-en-ligne');
+$router->setBasePath('/kawa');
 $router->map('GET|POST', '/', function () {
     $controller = new App\Controllers\MainController();
     $controller->index();

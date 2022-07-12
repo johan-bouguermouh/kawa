@@ -1,6 +1,6 @@
         <?php
         if (!isset($_SESSION['num_commande'])) {
-            header('Location: /boutique-en-ligne/');
+            header('Location: /kawa/');
         }
         ?>
 
@@ -48,7 +48,7 @@
 
                     <?php } ?>
                     <div>
-                        <button class="form__button"> <a href="/boutique-en-ligne"> retour</a></button>
+                        <button class="form__button"> <a href="/kawa"> retour</a></button>
 
                     </div>
 

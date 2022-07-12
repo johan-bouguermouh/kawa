@@ -214,7 +214,7 @@
                     <p><?= $_SESSION['nouvelarticle']['etape1']['prix_article'] ?>€</p>
                 </div>
                 <div>
-                    <img src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $_SESSION['nouvelarticle']['image_article'] ?>" alt="image de l'article">
+                    <img src="/kawa/public/assets/pictures/pictures_product/<?= $_SESSION['nouvelarticle']['image_article'] ?>" alt="image de l'article">
                     <div>
                         <h4><?= $_SESSION['nouvelarticle']['etape1']['presentation_article'] ?></h4>
                         <p><?= $_SESSION['nouvelarticle']['etape1']['description_article'] ?></p>

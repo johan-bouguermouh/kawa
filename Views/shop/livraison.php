@@ -1,7 +1,7 @@
   <?php
     require_once './app/Controllers/ShoppingCartController.php';
     if (!isset($_SESSION['user'])) {
-        header('Location: /boutique-en-ligne/connexion');
+        header('Location: /kawa/connexion');
     }
 
     $controller = new App\Controllers\ShoppingCartController();
@@ -157,7 +157,7 @@
                               <div class="cardProduct">
 
 
-                                  <img class="" src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
+                                  <img class="" src="/kawa/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
                                   <div class="cardProduct resume">
                                       <p> <?= $article['titre_article'] ?> </p>
                                       <div>

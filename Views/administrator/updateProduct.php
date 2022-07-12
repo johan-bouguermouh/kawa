@@ -102,7 +102,7 @@
             <fieldset>
                 <legend>Modifier l'image</legend>
                 <div class="imgContener">
-                    <img src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?=$product['image_article']?>" alt="image du produit">
+                    <img src="/kawa/public/assets/pictures/pictures_product/<?=$product['image_article']?>" alt="image du produit">
                     <label for="image_article">Télécharger une nouvelle image:</label>
                     <input class="custom-file-input" type="file" name="image_article">
                 </div>

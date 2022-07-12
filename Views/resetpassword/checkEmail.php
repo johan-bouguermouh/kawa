@@ -1,5 +1,5 @@
     <?php if (isset($_SESSION['user'])) {
-        header('Location: /boutique-en-ligne');
+        header('Location: /kawa');
     } ?>
 
 

@@ -42,7 +42,7 @@ class ProductComponent extends Product
      * @param string chemin d'enregistrement
      * @param string Nom du fichier
      */
-    public function stock_picture(string $chemin = '/boutique-en-ligne/public/assets/pictures/pictures_product/', ?string $lastName = null)
+    public function stock_picture(string $chemin = '/kawa/public/assets/pictures/pictures_product/', ?string $lastName = null)
     {
         if ($this->verify_upload('image_article') == true) {
             //Verification de l'extention du fichier reçu
@@ -92,7 +92,7 @@ class ProductComponent extends Product
      * @param string lein vers l'image
      * @param string Nome de l'image selectionner
      */
-    public function screen_result(string $nom_image = 'no_pict_product.jpg', string $chemin = '/boutique-en-ligne/public/assets/pictures/pictures_product/',)
+    public function screen_result(string $nom_image = 'no_pict_product.jpg', string $chemin = '/kawa/public/assets/pictures/pictures_product/',)
     {
 ?>
         <img style="width: 200px;height: 200px;" src="<?= $chemin . $nom_image ?>" alt="votre nouvelle image d'article'">
