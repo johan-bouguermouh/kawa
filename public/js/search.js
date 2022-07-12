@@ -17,12 +17,13 @@ window.addEventListener("DOMContentLoaded", () => {
     if(inputSearch.value.length > 2){
 
       const dataSearch = new FormData
-      dataSearch.set('recherhe', inputSearch.value)
+      dataSearch.set('recherche', inputSearch.value)
 
-      fetch('',{
+      fetch('../Api/apiSearch.php',{
         method: 'POST',
         body: dataSearch
-      })
+      }).then(response => response.text())
+      .then(data => console.log('RETOUR DE JSON ==>',data))
     }
   })
 });
