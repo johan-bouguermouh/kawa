@@ -15,7 +15,14 @@ window.addEventListener("DOMContentLoaded", () => {
   inputSearch.addEventListener("input", (event)=>{
     event.preventDefault()
     if(inputSearch.value.length > 2){
-      console.log(inputSearch.value)
+
+      const dataSearch = new FormData
+      dataSearch.set('recherhe', inputSearch.value)
+
+      fetch('',{
+        method: 'POST',
+        body: dataSearch
+      })
     }
   })
 });
