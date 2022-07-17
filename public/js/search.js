@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 
-   formSearch.addEventListener('submit', (event) => event.preventDefault)
+   //formSearch.addEventListener('submit', (event) => event.preventDefault)
    
       /**
      * Change la casse en capitale du premier caractère sur une chène donnée

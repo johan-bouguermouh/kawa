@@ -6,37 +6,10 @@ use Exceptions\NotFoundException;
 
 require_once 'app/Controllers/Security.php';
 
-//Control d'accée à l'url
-$urlControlUser = $_SERVER['REQUEST_URI'];
-$pathControl = explode('/', $urlControlUser);
-if ($pathControl[2] !== 'connexion') {
-    if ($pathControl[2] !== 'inscription') {
-        $_SERVER['HTTP_REFERER'] = $_SERVER['REQUEST_URI'];
-    }
-}
-if( $pathControl[2]=='livraison' && empty($_SESSION['user']) ){
-    // echo 'redirection';
-        echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="'.$pathControl[0].'/'.$pathControl[1].'/connexion" </SCRIPT>'; //force la direction
-    exit();
-}
-if ($pathControl[2] == 'admin' && $_SESSION['user']['role'] !== 'Admin') {
-    if (isset($_SESSION['user'])) {
-        // echo 'redirection';
-        echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="' . $pathControl[0] . '/' . $pathControl[1] . '/profil" </SCRIPT>'; //force la direction
-        exit();
-    } else {
-        echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="' . $pathControl[0] . '/' . $pathControl[1] . '/connexion" </SCRIPT>'; //force la direction 
-    }
-}
-if ($pathControl[2] == 'profil' && empty($_SESSION['user'])) {
-    echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="' . $pathControl[0] . '/' . $pathControl[1] . '/connexion" </SCRIPT>'; //force la direction 
-}
-if (($pathControl[2] == 'connexion' && !empty($_SESSION['user'])) || ($pathControl[2] == 'inscription' && !empty($_SESSION['user']))) {
-    echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="../kawa/"</SCRIPT>'; //force la direction 
-}
 
 //Sécurité de tout les formulaire Get|POST
 $securityAll = new Security();
+$securityAll->securityPath();
 if (isset($_GET)) {
     $securityAll->controlAll($_GET);
 }
