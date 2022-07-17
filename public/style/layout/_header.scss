@@ -64,6 +64,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     // flex-direction: column;
@@ -149,4 +150,36 @@
         text-align: center;
         font-size: 1rem;
     }
+}
+#searchResult{
+    width: 80%;
+    margin-right: 82px;
+    text-align: left;
+    border: solid 1px  #135e4d15;
+    border-radius: 0px 0px 4px 4px;
+}
+#searchResult ul{
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 16px;
+}
+#searchResult li{
+    width: 100%;
+    padding: 4px 0px 4px 16px;
+}
+#searchResult li a{
+    text-decoration: none;
+    color: #313131;
+    font-size: 24px;
+}
+#searchResult li:hover{
+    border-top: solid 1px rgba(133, 133, 133, 0.15);
+    border-bottom: solid 1px rgba(133, 133, 133, 0.15);
+    background-color: #135e4d33;
+}
+.liOnFocus{
+    border-top: solid 1px rgba(133, 133, 133, 0.15);
+    border-bottom: solid 1px rgba(133, 133, 133, 0.15);
+    background-color: #135e4d33;
 }

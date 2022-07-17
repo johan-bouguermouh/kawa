@@ -145,8 +145,16 @@ h1 {
   margin: 0.5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 @font-face {
   font-family: century-gothic, sans-serif;
+}
+
+.strBolder {
+  font-weight: bold;
 }
 
 .form__button {
@@ -586,6 +594,10 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -680,6 +692,44 @@ h1 {
     text-align: center;
     font-size: 1rem;
   }
+}
+
+#searchResult {
+  width: 80%;
+  margin-right: 82px;
+  text-align: left;
+  border: solid 1px  #135e4d15;
+  border-radius: 0px 0px 4px 4px;
+}
+
+#searchResult ul {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 16px;
+}
+
+#searchResult li {
+  width: 100%;
+  padding: 4px 0px 4px 16px;
+}
+
+#searchResult li a {
+  text-decoration: none;
+  color: #313131;
+  font-size: 24px;
+}
+
+#searchResult li:hover {
+  border-top: solid 1px rgba(133, 133, 133, 0.15);
+  border-bottom: solid 1px rgba(133, 133, 133, 0.15);
+  background-color: #135e4d33;
+}
+
+.liOnFocus {
+  border-top: solid 1px rgba(133, 133, 133, 0.15);
+  border-bottom: solid 1px rgba(133, 133, 133, 0.15);
+  background-color: #135e4d33;
 }
 
 .form {

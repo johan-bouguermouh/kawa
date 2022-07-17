@@ -22,13 +22,14 @@
 
     <div class="container">
         <button class="close" value="close"><img src="/kawa/public/img/close_icon.png" alt=""></button>
-        <form class="nav__search" action="/kawa/boutique/all" method="GET">
+        <form class="nav__search">
             <label for="site-search">Search the site:</label>
             <input type="search" name="recherche" aria-label="Search through site content" class="container__search" placeholder="Search ...">
             <button class="nav__link">
                 <i class="nav__icon fas fa-search"></i>
             </button>
         </form>
+        <section id="searchResult"></section>
     </div>
 
     <!-- </section> -->
