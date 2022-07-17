@@ -14,14 +14,11 @@ if ($pathControl[2] !== 'connexion') {
         $_SERVER['HTTP_REFERER'] = $_SERVER['REQUEST_URI'];
     }
 }
-// if($pathControl[2]=='admin' && $_SESSION['user']['role']!=='Admin')
-// {
-// if(isset($_SESSION['user']))
-// {
-// // echo 'redirection';
-//     echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="'.$pathControl[0].'/'.$pathControl[1].'/profil" </SCRIPT>'; //force la direction
-// exit();
-// }
+if( $pathControl[2]=='livraison' && empty($_SESSION['user']) ){
+    // echo 'redirection';
+        echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="'.$pathControl[0].'/'.$pathControl[1].'/connexion" </SCRIPT>'; //force la direction
+    exit();
+}
 if ($pathControl[2] == 'admin' && $_SESSION['user']['role'] !== 'Admin') {
     if (isset($_SESSION['user'])) {
         // echo 'redirection';
