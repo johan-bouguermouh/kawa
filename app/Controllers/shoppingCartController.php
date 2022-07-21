@@ -61,25 +61,27 @@ class ShoppingCartController extends Controller
 
     public function upValue()
     {
-        if (isset($_POST['upQuantity'])) {
+        // if (isset($_POST['upQuantity'])) {
 
-            $up =  $_POST['upQuantity'];
-            $id_article =  (int) $_POST['id_article'];
-            $argument = ['id_article'];
+        //     $up =  $_POST['upQuantity'];
+        //     $id_article =  (int) $_POST['id_article'];
+        //     $argument = ['id_article'];
 
-            $checkQuantity = [];
+        //     $checkQuantity = [];
 
-            $checkQuantity[$id_article] = $this->modelArticle->find($argument, compact('id_article'));
+        //     $checkQuantity[$id_article] = $this->modelArticle->find($argument, compact('id_article'));
 
 
-            if (($_SESSION['quantite'][$id_article] + $up)  <= $checkQuantity[$id_article][0]['sku']) {
-                $_SESSION['quantite'][$id_article] = $_SESSION['quantite'][$id_article] + $up;
-            } else {
-                $_SESSION['flash']['quantity'] = "Le stock est vide !";
-            }
+        //     if (($_SESSION['quantite'][$id_article] + $up)  <= $checkQuantity[$id_article][0]['sku']) {
+        //         $_SESSION['quantite'][$id_article] = $_SESSION['quantite'][$id_article] + $up;
+        //     } else {
+        //         $_SESSION['flash']['quantity'] = "Le stock est vide !";
+        //     }
 
-            header('refresh: 0');
-        }
+        //     header('refresh: 0');
+        // }
+
+        echo json_encode($_POST);
     }
 
     public function downValue()
@@ -163,7 +165,7 @@ class ShoppingCartController extends Controller
     {
         if (isset($_POST['goDelivery'])) {
             /*  header('location: ./livraison'); */
-            echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="/boutique-en-ligne/livraison" </SCRIPT>'; //force la direction
+            echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="/kawa/livraison" </SCRIPT>'; //force la direction
 
         }
     }

@@ -16,6 +16,7 @@ $controller->index();
 extract($controller->index());
 ?>
 <section id="mySidenav" class="sidenav">
+
     <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
     <h1>Mon panier</h1>
 
@@ -41,7 +42,7 @@ extract($controller->index());
         ?>
                     <form class="poductPanier" action="" method="post">
 
-                        <img class="picturePanier" src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
+                        <img class="picturePanier" src="/kawa/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
                         <div class="infoPanier">
                             <div class="firstInfoPanier">
                                 <p> <?= $article['titre_article'] ?> </p>
@@ -62,7 +63,7 @@ extract($controller->index());
                 </div>
                 <?php if (isset($_SESSION['quantite'][$article['id_article']])) { ?>
 
-                    <form action="" method="post">
+                    <form action="" method="post" class="formDelete">
                         <button name="deleteProduct" type="submit"> <i class="fa-solid fa-trash"></i> </button>
                         <input name="id_article" value="<?= $article['id_article'] ?>" type="hidden">
                     </form>
@@ -79,7 +80,7 @@ extract($controller->index());
         } ?>
     <div class="footerPanier">
         <p>Total tva incl : <?= $_SESSION['totalPrice'] ?> €</p>
-        <form action="" method="post">
+        <form action="" method="post" class="formDelivery">
             <input class="button" name="goDelivery" value="commandé" type="submit">
         </form>
     </div>
@@ -87,4 +88,8 @@ extract($controller->index());
     <p>Votre panier est vide.</p>
 <?php
     } ?>
+</section>
+
+<section>
+
 </section>

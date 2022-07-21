@@ -52,7 +52,7 @@ class AdminUpdateProductController extends Controller
 
             $product = $this->Product->find(['id_article'], [':id_article' => $id_article])[0];
 
-            if(!empty($_POST['deleteProductAdmin'])&& $_POST['deleteProductAdmin'] == 'on'){
+            if (!empty($_POST['deleteProductAdmin']) && $_POST['deleteProductAdmin'] == 'on') {
                 $this->Product->delete([':id_article' => $id_article]);
                 $product = null;
             }
@@ -188,7 +188,7 @@ class AdminUpdateProductController extends Controller
         }
     }
 
-    public function modifyPicture(string $name_file, string $namePicture, string $chemin = '/boutique-en-ligne/public/assets/pictures/pictures_product/')
+    public function modifyPicture(string $name_file, string $namePicture, string $chemin = '/kawa/public/assets/pictures/pictures_product/')
     {
 
         if (!empty($_FILES[$name_file]['name'])) {

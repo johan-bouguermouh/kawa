@@ -72,7 +72,7 @@ class ModifierAdresseController extends Controller
 
         if (isset($_POST['supprimer'])) {
             $deleteAdresse = $model->delete(compact('id_adresse'));
-            echo "<SCRIPT LANGUAGE=\"JavaScript\"> document.location.href=\"/../boutique-en-ligne/profil/adresse\" </SCRIPT>"; //force la direction
+            echo "<SCRIPT LANGUAGE=\"JavaScript\"> document.location.href=\"/../kawa/profil/adresse\" </SCRIPT>"; //force la direction
 
         }
     }

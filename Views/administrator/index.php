@@ -22,6 +22,6 @@
         <?php endif; ?>
     </article>
     <article class="acountIndexMain">
-        <img class="imgIndexAcount" src="../boutique-en-ligne/public/assets/pictures/kawa_image_indexAcount.png" alt="image d'attente">
+        <img class="imgIndexAcount" src="../kawa/public/assets/pictures/kawa_image_indexAcount.png" alt="image d'attente">
     </article>
 </section>
