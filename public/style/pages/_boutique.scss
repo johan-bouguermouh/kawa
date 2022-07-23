@@ -142,6 +142,7 @@
     }
     .moreRecherche {
         grid-column: 1 / 6;
+        min-height: calc(100vh - 155px - 45px);
         box-shadow: -10px 10px 0px 10px rgb(255, 255, 255), 5px 10px 10px -2px rgba(0, 0, 0, 0.185);
         &>a {
             display: none;
