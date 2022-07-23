@@ -1071,16 +1071,12 @@ h1 {
   padding: 0;
 }
 
-.selectQuatity form:last-child {
-  display: none;
+.selectQuatity button[name=deleteProduct] {
   margin: 0;
   padding: 0;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-}
-
-.selectQuatity form:last-child button {
   border: none;
   color: #818181;
 }
@@ -1096,6 +1092,8 @@ h1 {
   top: 0;
   /* Stay at the top */
   right: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   -webkit-box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.15);
           box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.15);
   background-color: rgba(255, 255, 255, 0.95);
@@ -1115,6 +1113,17 @@ h1 {
   z-index: 99;
   padding: 64px 32px 64px 32px;
   /* Place content 60px from the top */
+}
+
+.sidenav__content {
+  width: 391px;
+}
+
+.openSideNav {
+  -webkit-animation: openSideNav 0.5s cubic-bezier(0.17, 0.67, 0.91, 0.88) forwards;
+          animation: openSideNav 0.5s cubic-bezier(0.17, 0.67, 0.91, 0.88) forwards;
+  -webkit-transform: translateX();
+          transform: translateX();
 }
 
 /* The navigation menu links */
@@ -1296,10 +1305,8 @@ h1 {
 .CTA button {
   width: 20%;
   height: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  color: #135e4c;
+  background-color: #135e4c;
+  color: white;
   border: none;
   font-family: "century-gothic, sans-serif";
   padding: 8px 16px;
@@ -1307,6 +1314,8 @@ h1 {
   font-weight: bold;
   font-size: 2rem;
   margin-top: 1rem;
+  -webkit-box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
+          box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
 }
 
 .CTA button:hover {

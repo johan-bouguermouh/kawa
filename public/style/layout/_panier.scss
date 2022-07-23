@@ -96,15 +96,13 @@
     }
   }
 
-  & form:last-child {
-    display: none;
+  & button[name=deleteProduct] {
     margin: 0;
     padding: 0;
     order: -1;
-    & button {
       border: none;
       color: #818181;
-    }
+
   }
 }
 .sidenav {
@@ -114,6 +112,7 @@
   position: fixed; /* Stay in place */
   top: 0; /* Stay at the top */
   right: 0;
+  box-sizing: content-box;
   box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.15);
   background-color: rgba(255, 255, 255, 0.95); /* Black*/
   backdrop-filter: blur(5px);
@@ -125,6 +124,14 @@
     z-index: 99;
     padding: 64px 32px 64px 32px; /* Place content 60px from the top */
   }
+  &__content{
+    width: 391px;
+  }
+}
+
+.openSideNav{
+  animation: openSideNav 0.5s cubic-bezier(.17,.67,.91,.88)  forwards;
+  transform: translateX();
 }
 
 /* The navigation menu links */
