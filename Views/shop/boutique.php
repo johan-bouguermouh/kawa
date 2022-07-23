@@ -35,23 +35,23 @@
                 ?>
             </fieldset>
             <fieldset>
-                <legend>Provenence :</legend>
-
+                <legend>Spécificités :</legend>
                 <?php
-                foreach ($result_request['origin'] as $value) {
+                foreach ($result_request['specificite'] as $value) {
                 ?>
-                    <input type="radio" name="PROVENENCE" id="<?= $value['nom_categorie'] ?>" value="<?= $value['nom_categorie'] ?>">
+                    <input type="checkbox" name="SPÉCIFICITÉ[]" id="<?= $value['nom_categorie'] ?>" value="<?= $value['nom_categorie'] ?>">
                     <label for="<?= $value['nom_categorie'] ?>"><?= $value['nom_categorie'] ?></label>
                 <?php
                 }
                 ?>
             </fieldset>
             <fieldset>
-                <legend>Spécificités :</legend>
+                <legend>Provenence :</legend>
+
                 <?php
-                foreach ($result_request['specificite'] as $value) {
+                foreach ($result_request['origin'] as $value) {
                 ?>
-                    <input type="checkbox" name="SPÉCIFICITÉ[]" id="<?= $value['nom_categorie'] ?>" value="<?= $value['nom_categorie'] ?>">
+                    <input type="radio" name="PROVENENCE" id="<?= $value['nom_categorie'] ?>" value="<?= $value['nom_categorie'] ?>">
                     <label for="<?= $value['nom_categorie'] ?>"><?= $value['nom_categorie'] ?></label>
                 <?php
                 }

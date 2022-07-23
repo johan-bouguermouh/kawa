@@ -952,9 +952,10 @@ h1 {
 
 .footerPanier {
   font-size: 1.6rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 2rem;
   color: #135e4c;
   font-weight: bold;
@@ -1295,8 +1296,10 @@ h1 {
 .CTA button {
   width: 20%;
   height: 50%;
-  background-color: #135e4c;
-  color: white;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  color: #135e4c;
   border: none;
   font-family: "century-gothic, sans-serif";
   padding: 8px 16px;
@@ -1304,8 +1307,6 @@ h1 {
   font-weight: bold;
   font-size: 2rem;
   margin-top: 1rem;
-  -webkit-box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
-          box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
 }
 
 .CTA button:hover {
@@ -2069,7 +2070,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: auto;
+  margin-top: 32px;
 }
 
 .notifAcount a {
@@ -3359,6 +3360,10 @@ h1 {
   height: 100%;
 }
 
+.containerResumePayment .formField.paimentResume {
+  max-width: 600px;
+}
+
 .containerResumePayment .formField.paimentResume div {
   margin: 2%;
   display: -webkit-box;
@@ -3378,6 +3383,7 @@ h1 {
 
 .containerResumePayment .formField.paimentResume h1 {
   text-align: center;
+  line-height: 90%;
 }
 
 .containerResumePayment .formField.paimentResume a {
