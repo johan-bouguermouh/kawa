@@ -1,3 +1,5 @@
+
+
 .poductPanier,
 .footerPanier {
   display: flex;
@@ -96,24 +98,24 @@
     }
   }
 
-  & form:last-child {
-    display: none;
+  & button[name=deleteProduct] {
     margin: 0;
+    cursor: pointer;
     padding: 0;
     order: -1;
-    & button {
       border: none;
       color: #818181;
-    }
+
   }
 }
 .sidenav {
+  transform: translateX(450px);
   z-index: 99;
   height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   top: 0; /* Stay at the top */
   right: 0;
+  box-sizing: content-box;
   box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.15);
   background-color: rgba(255, 255, 255, 0.95); /* Black*/
   backdrop-filter: blur(5px);
@@ -121,10 +123,23 @@
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   &:target {
     overflow-y: scroll;
-    width: 100%;
     z-index: 99;
     padding: 64px 32px 64px 32px; /* Place content 60px from the top */
+    display: block;
   }
+  &__content{
+    padding-bottom: 150px;
+    padding-right: 15px;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+  }
+  
+}
+
+.openSideNav{
+  animation: openSideNav 0.5s cubic-bezier(.17,.67,.91,.88)  forwards;
+  transform: translateX();
 }
 
 /* The navigation menu links */
@@ -188,7 +203,5 @@
 }
 
 @media screen and (max-device-width: 1024px) {
-  .sidenav:target {
-    width: 100%;
-  }
+
 }

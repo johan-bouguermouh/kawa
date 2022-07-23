@@ -249,18 +249,6 @@ abstract class Model
         return $this->requeteTransaction($req, $connexion, $donnees);
     }
 
-    // UPDATE
-    /**
-     * La fonction prend deux params :
-     * les deux premiers sont obligatoires.
-     * 1er param '$model' = il faut hydrater les setter que nous souhaitons :  exemple    
-     *  $model = new ExempleModel($this->getDB());
-            $model_Article = $model
-            ->setId_article($id_article)
-             ->setTitre_article($titre_article);
-     * 2eme param '$donnees' = envoyer dans un compact 1 ou plusieurs noms de colonnes : cela permet de modifier les champs.
-     */
-
 
     public function update(model $model, array $donnees)
     {
@@ -289,7 +277,7 @@ abstract class Model
     // DELETE
     public function delete(array $donnees = Null)
     {
-        $req = "DELETE FROM {$this->table} WHERE {$this->id} =:{$this->id}";
+        $req = "DELETE FROM {$this->table} WHERE {$this->id} =:{$this->id} AND `role` = 'Utilisateurs'";
         return $this->requete($req, $donnees);
     }
 }
