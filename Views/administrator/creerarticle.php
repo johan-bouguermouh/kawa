@@ -60,23 +60,24 @@
                 <fieldset>
                     <legend>Informations sur l'article</legend>
                     <label for="titre_article"> Nom de l'articles:</label>
-                    <input class="form__text" type="text" name="titre_article" id="titre_article" value="<?= $Admin_function->coverup_form('titre_article') ?>">
+                    <input class="form__text" type="text" name="titre_article" id="titre_article" value="MUDA - ÇA PASSE CRÈME<?= $Admin_function->coverup_form('titre_article') ?>">
                     <label for="prix_article"> Prix unitaire:</label>
-                    <input class="form__text" number="text" step="0.01" name="prix_article" id="prix_article" value="<?= $Admin_function->coverup_form('prix_article') ?>">
+                    <input class="form__text" number="text" step="0.01" name="prix_article" id="prix_article" value="7.90<?= $Admin_function->coverup_form('prix_article') ?>">
                     <label for="presentation_article">Présentation de l'article :</label>
-                    <textarea id="presentation_article" name="presentation_article"><?= $Admin_function->coverup_form('presentation_article') ?></textarea>
+                    <textarea id="presentation_article" name="presentation_article" >Un café noir ou avec du lait ? Ça passe crème !<?= $Admin_function->coverup_form('presentation_article') ?></textarea>
                     <label for="description_article">Description de l'article:</label>
-                    <textarea id="description_article" name="description_article"><?= $Admin_function->coverup_form('description_article') ?></textarea>
+                    <textarea id="description_article" name="description_article" >"Vous aimez les cafés ronds aux notes chocolatées ? Ce café est fait pour vous ! Un café facile à boire et à préparer qui plaira au plus grand nombre. Il passera très bien au petit déjeuner avec votre croissant ou tartine.
+L’origine de ce café changera au fil des saisons de récoltes, mais le profil aromatique restera le même."<?= $Admin_function->coverup_form('description_article') ?></textarea>
                 </fieldset>
 
                 <fieldset>
                     <legend>Information connexe</legend>
                     <label for="conditionnement">Preciser le conditionnement de l'article :</label>
-                    <input class="form__text" type="text" name="conditionnement" id="conditionnement" placeholder="Sachet de 300g" value="<?= $Admin_function->coverup_form('conditionnement') ?>">
+                    <input class="form__text" type="text" name="conditionnement" id="conditionnement" placeholder="Sachet de 300g" value="Sachet de 250g<?= $Admin_function->coverup_form('conditionnement') ?>">
                     <label for="sku">Nombre d'article en stock:</label>
-                    <input class="form__text" type="number" name="sku" id="sku" value="<?= $Admin_function->coverup_form('sku') ?>">
-                    <label for="fournisseur">Nom du fournisseur:</label>
-                    <input class="form__text" type="text" name="fournisseur" id="fournisseur" value="<?= $Admin_function->coverup_form('fournisseur') ?>">
+                    <input class="form__text" type="number" name="sku" id="sku" value="100<?= $Admin_function->coverup_form('sku') ?>">
+                    <label for="fournisseur">Nom du producteur:</label>
+                    <input class="form__text" type="text" name="fournisseur" id="fournisseur" value="FAMILLE DUTRA<?= $Admin_function->coverup_form('fournisseur') ?>">
                 </fieldset>
                 <input class="ctaCreatProduct" type="submit" name="etape1" value="Passer à l'étape suivante">
             </form>
@@ -214,7 +215,7 @@
                     <p><?= $_SESSION['nouvelarticle']['etape1']['prix_article'] ?>€</p>
                 </div>
                 <div>
-                    <img src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $_SESSION['nouvelarticle']['image_article'] ?>" alt="image de l'article">
+                    <img src="/kawa/public/assets/pictures/pictures_product/<?= $_SESSION['nouvelarticle']['image_article'] ?>" alt="image de l'article">
                     <div>
                         <h4><?= $_SESSION['nouvelarticle']['etape1']['presentation_article'] ?></h4>
                         <p><?= $_SESSION['nouvelarticle']['etape1']['description_article'] ?></p>

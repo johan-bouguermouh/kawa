@@ -1,11 +1,11 @@
 <?php
 require_once './app/Controllers/ShoppingCartController.php';
 if (!isset($_SESSION['user'])) {
-  header('Location: /boutique-en-ligne/');
+  header('Location: /kawa/');
 }
 
 if (!isset($_SESSION['validate'])) {
-  header('Location: /boutique-en-ligne/');
+  header('Location: /kawa/');
 }
 $controller = new App\Controllers\ShoppingCartController();
 
@@ -84,7 +84,7 @@ extract($controller->index());
               <div class="cardProduct">
 
 
-                <img class="" src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
+                <img class="" src="/kawa/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
                 <div class="cardProduct resume">
                   <p> <?= $article['titre_article'] ?> </p>
                   <div>

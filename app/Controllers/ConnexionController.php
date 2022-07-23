@@ -11,10 +11,10 @@ class ConnexionController extends Controller
     public function index()
     {
         $title = "Connexion";
-        /*  $refererPath = explode('/', $_SERVER['HTTP_REFERER'])[4];
+        $refererPath = explode('/', $_SERVER['HTTP_REFERER'])[4];
                if ($refererPath !== 'connexion' && $refererPath !== 'Admin') {
             $_SESSION['reload'] = $_SERVER['HTTP_REFERER'];
-        } */
+        }
         return $this->view('profil.connexion', compact('title'));
     }
 

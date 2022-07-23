@@ -1,7 +1,7 @@
   <?php
     require_once './app/Controllers/ShoppingCartController.php';
     if (!isset($_SESSION['user'])) {
-        header('Location: /boutique-en-ligne/connexion');
+        header('Location: /kawa/connexion');
     }
 
     $controller = new App\Controllers\ShoppingCartController();
@@ -63,22 +63,22 @@
 
               <fieldset>
                   <legend> Prenom : </legend>
-                  <input class="formLivraison__text" name="prenom" value="" type="text">
+                  <input class="formLivraison__text" name="prenom" value="Johan" type="text">
               </fieldset>
 
               <fieldset>
                   <legend> Nom : </legend>
-                  <input class="formLivraison__text" name="nom" value="" type="text">
+                  <input class="formLivraison__text" name="nom" value="Bouguermouh" type="text">
               </fieldset>
 
               <fieldset>
                   <legend l> Numero de telephone : </legend>
-                  <input class="formLivraison__text" name="telephone" value="" type="text">
+                  <input class="formLivraison__text" name="telephone" value="0766640660" type="text">
               </fieldset>
 
               <fieldset>
                   <legend> Email : </legend>
-                  <input class="formLivraison__text" name="email" value="" type="text">
+                  <input class="formLivraison__text" name="email" value="johan@gmail.com" type="text">
               </fieldset>
 
 
@@ -157,7 +157,7 @@
                               <div class="cardProduct">
 
 
-                                  <img class="" src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
+                                  <img class="" src="/kawa/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
                                   <div class="cardProduct resume">
                                       <p> <?= $article['titre_article'] ?> </p>
                                       <div>

@@ -124,7 +124,7 @@ class AdminCreateProductController extends Controller
      * @param string chemin vers l'image
      * @param string nom de l'image
      */
-    public function upload_image(string $name_file, string $chemin = '/boutique-en-ligne/public/assets/pictures/pictures_product/')
+    public function upload_image(string $name_file, string $chemin = '/kawa/public/assets/pictures/pictures_product/')
     {
         $this->Product->verify_upload($name_file);
         $this->Product->stock_picture($chemin);
@@ -133,7 +133,7 @@ class AdminCreateProductController extends Controller
         }
 
         if (isset($_SESSION['nouvelarticle']['image_article'])) {
-            $this->Product->screen_result($_SESSION['nouvelarticle']['image_article'], '/boutique-en-ligne/public/assets/pictures/pictures_product/');
+            $this->Product->screen_result($_SESSION['nouvelarticle']['image_article'], '/kawa/public/assets/pictures/pictures_product/');
         } else $this->Product->screen_result();
     }
 

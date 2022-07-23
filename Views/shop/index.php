@@ -9,6 +9,36 @@
 <div class="homeContainer">
 
 
+    <article class="introHome">
+        <section>
+            <img id="fleche" src=".\public\img\icone_fleche.png" alt="icone fleche" />
+            <p>
+                Nos meilleurs ventes, ainsi que les nouveautés. <br> Laissez-vous guider par vos habitudes gustative.
+            </p>
+        </section>
+    </article>
+
+
+    <article class="homeProposition">
+        <section class="caroussel caroussel--home">
+            <div class="caroussel__element">
+                <?php for ($i = 0; $i <= $selectNumberofCard; $i++) : ?>
+                    <?php $cards->printCard($cards->getDataByid($bestArticle[$i]['fk_id_article'])) ?>
+                <?php endfor; ?>
+            </div>
+        </section>
+
+        <section class="lastProduct">
+            <?php $cards->printCard($cards->getDataByid($lastidProduct)) ?>
+            <img class="vignette" src=".\public\assets\pictures\kawa_icon_new.svg" alt="">
+        </section>
+    </article>
+
+
+    <div data-aos="fade-right" data-aos-duration="3000">
+        <h2 class="home_title">NOTRE PHILOSOPHIE</h2>
+    </div>
+    
     <article data-aos="fade-right" data-aos-duration="3000" class="introHome">
         <section>
             <img id="fleche" src=".\public\img\icone_fleche.png" alt="icone fleche" />
@@ -19,12 +49,6 @@
             </p>
         </section>
     </article>
-
-
-    <div data-aos="fade-right" data-aos-duration="3000">
-        <h2 class="home_title">NOTRE PHILOSOPHIE</h2>
-
-    </div>
 
     <section>
         <div class="container_responsive">
@@ -70,30 +94,7 @@
         </div>
     </section>
 
-    <article class="introHome">
-        <section>
-            <img id="fleche" src=".\public\img\icone_fleche.png" alt="icone fleche" />
-            <p>
-                Nos meilleurs ventes, ainsi que les nouveautés. <br> Laissez-vous guider par vos habitudes gustative.
-            </p>
-        </section>
-    </article>
-
-
-    <article class="homeProposition">
-        <section class="caroussel caroussel--home">
-            <div class="caroussel__element">
-                <?php for ($i = 0; $i <= $selectNumberofCard; $i++) : ?>
-                    <?php $cards->printCard($cards->getDataByid($bestArticle[$i]['fk_id_article'])) ?>
-                <?php endfor; ?>
-            </div>
-        </section>
-
-        <section class="lastProduct">
-            <?php $cards->printCard($cards->getDataByid($lastidProduct)) ?>
-            <img class="vignette" src=".\public\assets\pictures\kawa_icon_new.svg" alt="">
-        </section>
-    </article>
+    
     <h2 class="home_title">Comment aimez vous boire votre café ?</h2>
     <div class="scrollHorizontal">
 

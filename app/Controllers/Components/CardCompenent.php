@@ -32,16 +32,16 @@ class CardCompenent extends Product
             $id = '';
         }
     ?>
-        <a href="/boutique-en-ligne/produit/<?=$dataProduct['id_article']?>">
+        <a href="/kawa/produit/<?=$dataProduct['id_article']?>">
         <section class="card">
             <div class="card__picture">
-                <img <?=$id?> src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?=$dataProduct['image_article']?>" alt="">
+                <img <?=$id?> src="/kawa/public/assets/pictures/pictures_product/<?=$dataProduct['image_article']?>" alt="">
             </div>
             <?php if(isset($dataProduct['SPÉCIFICITÉ']) && in_array('Biologique',$dataProduct['SPÉCIFICITÉ'])==true):?>
-                <img class="card__logoAb" src="/boutique-en-ligne/public/assets/pictures/pictures_product/kawa_logo_ab.png" alt="">
+                <img class="card__logoAb" src="/kawa/public/assets/pictures/pictures_product/kawa_logo_ab.png" alt="">
             <?php endif;?>
             <?php if($dataProduct['sku']==0):?>
-                <img class="card__logonostock" src="/boutique-en-ligne/public/assets/pictures/pictures_product/kawa_vigne_nostock.png" alt="">
+                <img class="card__logonostock" src="/kawa/public/assets/pictures/pictures_product/kawa_vigne_nostock.png" alt="">
             <?php endif;?>
             <div class="card__info">
             <H4 class="card__like"><i class="fa-solid fa-thumbs-up"> </i><?=$likes?></H4>

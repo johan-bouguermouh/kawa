@@ -36,9 +36,9 @@
                         <td><?= $value['cat parent'] ?></td>
                         <td><?= $value['sku'] ?></td>
                         <td>
-                            <form action="#<?= $value['id_article'] ?>" method="POST">
+                            <form action="/kawa/produit/<?= $value['id_article'] ?>" method="POST">
                                 <?php if (empty($_POST['enterFormNow' . $value['id_article']])) : ?>
-                                    <button type="submit" name="enterFormNow<?= $value['id_article'] ?>">Restocker</button>
+                                    <button type="submit" name="enterFormNow<?= $value['id_article'] ?>">Consulter</button>
                                 <?php else : ?>
                                     <input type="text" name="sku" value="<?= $value['sku'] ?>">
                                     <button type="submit" name="id_article" value="<?= $value['id_article'] ?>">Ajouter au Stock</button>
@@ -94,7 +94,7 @@
                             <?php if (empty($_POST['enterForm' . $value['id_article']])) : ?>
                                 <button type="submit" name="enterForm<?= $value['id_article'] ?>" value="<?= $value['id_article'] ?>">Restocker</button>
                             <?php else : ?>
-                                <input type="text" name="sku">
+                                <input type="number" name="sku" step="1">
                                 <button type="submit" name="id_article" value="<?= $value['id_article'] ?>">Ajouter au Stock</button>
                             <?php endif; ?>
                         </form>

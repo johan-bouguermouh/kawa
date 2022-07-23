@@ -163,7 +163,7 @@ class ShoppingCartController extends Controller
     {
         if (isset($_POST['goDelivery'])) {
             /*  header('location: ./livraison'); */
-            echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="/boutique-en-ligne/livraison" </SCRIPT>'; //force la direction
+            echo '<SCRIPT LANGUAGE="JavaScript"> document.location.href="/kawa/livraison" </SCRIPT>'; //force la direction
 
         }
     }

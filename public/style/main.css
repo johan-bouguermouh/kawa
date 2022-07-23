@@ -145,8 +145,16 @@ h1 {
   margin: 0.5rem;
 }
 
+.hidden {
+  display: none;
+}
+
 @font-face {
   font-family: century-gothic, sans-serif;
+}
+
+.strBolder {
+  font-weight: bold;
 }
 
 .form__button {
@@ -586,6 +594,10 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -680,6 +692,44 @@ h1 {
     text-align: center;
     font-size: 1rem;
   }
+}
+
+#searchResult {
+  width: 80%;
+  margin-right: 82px;
+  text-align: left;
+  border: solid 1px  #135e4d15;
+  border-radius: 0px 0px 4px 4px;
+}
+
+#searchResult ul {
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 16px;
+}
+
+#searchResult li {
+  width: 100%;
+  padding: 4px 0px 4px 16px;
+}
+
+#searchResult li a {
+  text-decoration: none;
+  color: #313131;
+  font-size: 24px;
+}
+
+#searchResult li:hover {
+  border-top: solid 1px rgba(133, 133, 133, 0.15);
+  border-bottom: solid 1px rgba(133, 133, 133, 0.15);
+  background-color: #135e4d33;
+}
+
+.liOnFocus {
+  border-top: solid 1px rgba(133, 133, 133, 0.15);
+  border-bottom: solid 1px rgba(133, 133, 133, 0.15);
+  background-color: #135e4d33;
 }
 
 .form {
@@ -848,40 +898,46 @@ h1 {
   background-color: #125e4c;
   -ms-flex-item-align: center;
       align-self: center;
-  padding: 32px 16px 64px 16px;
+  padding: 8px 16px 64px 16px;
   width: 100%;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 25vh;
 }
 
 .footerAboutUs h3 {
-  padding-left: 5vw;
-  font-size: clamp(1rem, 2.5vw, 2.3rem);
+  font-size: clamp(1rem, 1.8vw, 2.3rem);
 }
 
 .footerAboutUs p {
   padding-right: 5vw;
-  font-size: clamp(1rem, 2.5vw, 2rem);
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  font-size: 8px;
+  width: 90%;
 }
 
-.footerAboutUs i {
+.footerAboutUs section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerAboutUs section i {
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  padding: 8px 18px;
 }
 
 .poductPanier,
@@ -896,9 +952,10 @@ h1 {
 
 .footerPanier {
   font-size: 1.6rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 2rem;
   color: #135e4c;
   font-weight: bold;
@@ -1239,8 +1296,10 @@ h1 {
 .CTA button {
   width: 20%;
   height: 50%;
-  background-color: #135e4c;
-  color: white;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  color: #135e4c;
   border: none;
   font-family: "century-gothic, sans-serif";
   padding: 8px 16px;
@@ -1248,8 +1307,6 @@ h1 {
   font-weight: bold;
   font-size: 2rem;
   margin-top: 1rem;
-  -webkit-box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
-          box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
 }
 
 .CTA button:hover {
@@ -1320,6 +1377,7 @@ h1 {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 6%;
 }
 
 .cardChoice {
@@ -1357,20 +1415,22 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 100vw;
   padding-bottom: 4%;
+  padding-top: 4%;
   border-bottom: #1d705dd9 solid 0.5px;
 }
 
@@ -2010,7 +2070,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: auto;
+  margin-top: 32px;
 }
 
 .notifAcount a {
@@ -3300,6 +3360,10 @@ h1 {
   height: 100%;
 }
 
+.containerResumePayment .formField.paimentResume {
+  max-width: 600px;
+}
+
 .containerResumePayment .formField.paimentResume div {
   margin: 2%;
   display: -webkit-box;
@@ -3319,6 +3383,7 @@ h1 {
 
 .containerResumePayment .formField.paimentResume h1 {
   text-align: center;
+  line-height: 90%;
 }
 
 .containerResumePayment .formField.paimentResume a {

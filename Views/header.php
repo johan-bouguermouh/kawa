@@ -3,8 +3,8 @@
 <nav class="nav">
 
     <!-- <section class="nav__list"> -->
-    <a class="nav__link" href="/boutique-en-ligne/boutique/all">
-        <img class="nav__logo" style="height:40px" src="/boutique-en-ligne/public/assets/pictures/kawa_logo_color.svg" alt="revenir à l'accuil principal">
+    <a class="nav__link" href="/kawa/boutique/all">
+        <img class="nav__logo" style="height:40px" src="/kawa/public/assets/pictures/kawa_logo_color.svg" alt="revenir à l'accuil principal">
     </a>
 
     <button type="submit" class="nav__link nav__search btn">
@@ -21,14 +21,15 @@
 
 
     <div class="container">
-        <button class="close" value="close"><img src="/boutique-en-ligne/public/img/close_icon.png" alt=""></button>
-        <form class="nav__search" action="/boutique-en-ligne/boutique/all" method="GET">
+        <button class="close" value="close"><img src="/kawa/public/img/close_icon.png" alt=""></button>
+        <div class="nav__search">
             <label for="site-search">Search the site:</label>
             <input type="search" name="recherche" aria-label="Search through site content" class="container__search" placeholder="Search ...">
             <button class="nav__link">
                 <i class="nav__icon fas fa-search"></i>
             </button>
-        </form>
+        </div>
+        <section id="searchResult"></section>
     </div>
 
     <!-- </section> -->

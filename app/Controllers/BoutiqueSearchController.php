@@ -187,55 +187,55 @@ class BoutiqueSearchController extends Controller
         if (isset($_SESSION['filter']['VARIÉTÉ']) && count($result) >= 1) {
             $result = $this->Product->selectArrayByValue($result, 'VARIÉTÉ', $_SESSION['filter']['VARIÉTÉ']);
         }
-        if (isset($_SESSION['filter']['SPÉCIFICITÉ']) && count($result) >= 1) {
+        if (isset($_SESSION['filter']['SPÉCIFICITÉ'])) {
             foreach ($_SESSION['filter']['SPÉCIFICITÉ'] as $value) {
                 if (count($result) < 1) {
                     return $result;
                 } else {
                     $return = $this->Product->selectArrayByValue($result, 'SPÉCIFICITÉ', $value);
-                    if (!empty($return)) {
+                    if (!empty($return)  && count($result) >= 1) {
                         $result = $return;
                     } else {
                         $this->error = "Le filtre de la spécificité " . $value . " n'a pus aboutir à un resultat, nous vous proposons cependant les articles suivant :";
-                        return $result;
+                        // return $result;
                     }
                 }
             }
         }
-        if (isset($_SESSION['filter']['SAVEUR']) && count($result) >= 1) {
+        if (isset($_SESSION['filter']['PROVENENCE'])) {
+            $return = $this->Product->selectArrayByValue($result, 'PROVENENCE', $_SESSION['filter']['PROVENENCE']);
+            if (!empty($return) && count($result) >= 1) {
+                $result = $return;
+            } else {
+                $this->error = "Le filtre de la provenence " . $_SESSION['filter']['PROVENENCE'] . " n'a pus aboutir à un resultat, nous vous proposons cependant les articles suivant :";
+                // return $result;
+            }
+        }
+        if (isset($_SESSION['filter']['SAVEUR']) ) {
             foreach ($_SESSION['filter']['SAVEUR'] as $value) {
                 if (count($result) < 1) {
-                    return $result;
+                    // return $result;
                 } else {
                     $return = $this->Product->selectArrayByValue($result, 'SAVEUR', $value);
-                    if (!empty($return)) {
+                    if (!empty($return) && count($result) >= 1) {
                         $result = $return;
                     } else {
                         $this->error = "Le filtre de la saveur " . $value . " n'a pus aboutir à un resultat, nous vous proposons cependant les articles suivant :";
-                        return $result;
+                        // return $result;
                     }
                 }
             }
         }
-        if (isset($_SESSION['filter']['FORCE']) && count($result) >= 1) {
+        if (isset($_SESSION['filter']['FORCE']) ) {
             $return = $this->Product->selectArrayByValue($result, 'FORCE', $_SESSION['filter']['FORCE']);
-            if (!empty($return)) {
+            if (!empty($return) && count($result) >= 1) {
                 $result = $return;
             } else {
                 $this->error = "Le filtre de la force " . $_SESSION['filter']['FORCE'] . " n'a pus aboutir à un resultat, nous vous proposons cependant les articles suivant :";
-                return $result;
+                // return $result;
             }
         }
 
-        if (isset($_SESSION['filter']['PROVENENCE']) && count($result) >= 1) {
-            $return = $this->Product->selectArrayByValue($result, 'PROVENENCE', $_SESSION['filter']['PROVENENCE']);
-            if (!empty($return)) {
-                $result = $return;
-            } else {
-                $this->error = "Le filtre de la provenence" . $_SESSION['filter']['PROVENENCE'] . " n'a pus aboutir à un resultat, nous vous proposons cependant les articles suivant :";
-                return $result;
-            }
-        }
 
         return $result;
     }

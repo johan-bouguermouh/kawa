@@ -18,11 +18,11 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/gij8hzs.css">
-    <link rel="stylesheet" href="/boutique-en-ligne/public/style/main.css">
-    <script type="text/javaScript" src="/boutique-en-ligne/public/js/menuAdmin.js"></script>
-    <!-- <script type="text/javaScript" src="/boutique-en-ligne/public/js/panier.js"></script> -->
-    <script type="text/javaScript" src="/boutique-en-ligne/public/js/search.js"></script>
-    <script type="text/javaScript" src="/boutique-en-ligne/public/js/carousel.js"></script>
+    <link rel="stylesheet" href="/kawa/public/style/main.css">
+    <script type="text/javaScript" src="/kawa/public/js/menuAdmin.js"></script>
+    <!-- <script type="text/javaScript" src="/kawa/public/js/panier.js"></script> -->
+    <script type="text/javaScript" src="/kawa/public/js/search.js"></script>
+    <script type="text/javaScript" src="/kawa/public/js/carousel.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

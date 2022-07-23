@@ -41,7 +41,7 @@ extract($controller->index());
         ?>
                     <form class="poductPanier" action="" method="post">
 
-                        <img class="picturePanier" src="/boutique-en-ligne/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
+                        <img class="picturePanier" src="/kawa/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
                         <div class="infoPanier">
                             <div class="firstInfoPanier">
                                 <p> <?= $article['titre_article'] ?> </p>

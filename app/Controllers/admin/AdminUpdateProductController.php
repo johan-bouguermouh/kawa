@@ -188,7 +188,7 @@ class AdminUpdateProductController extends Controller
         }
     }
 
-    public function modifyPicture(string $name_file, string $namePicture, string $chemin = '/boutique-en-ligne/public/assets/pictures/pictures_product/')
+    public function modifyPicture(string $name_file, string $namePicture, string $chemin = '/kawa/public/assets/pictures/pictures_product/')
     {
 
         if (!empty($_FILES[$name_file]['name'])) {
