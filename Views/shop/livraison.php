@@ -142,8 +142,7 @@
 
 
               <?php if (!empty($_SESSION['quantite'])) { ?>
-                  <h3> nombre total d'articles : <?php echo $_SESSION['totalQuantity'] ?> </h3>
-                  <h3>Total tva incl <?= $_SESSION['totalPrice'] ?> €</h3>
+                  
                   <a href="#mySidenav" class="nav__link" onclick="openNav()">
                       <p class="form__button">Modifier</p>
                   </a>
@@ -159,16 +158,11 @@
 
                                   <img class="" src="/kawa/public/assets/pictures/pictures_product/<?= $article['image_article'] ?>" alt="">
                                   <div class="cardProduct resume">
-                                      <p> <?= $article['titre_article'] ?> </p>
+                                      <h4> <?= $article['titre_article'] ?> </h4>
                                       <div>
-                                          <p>prix</p>
-                                          <p> <?= $article['prix_article'] ?> €</p>
-                                      </div>
-
-                                      <div>
-
+                                          <p>prix <?= $article['prix_article'] ?> €</p>
                                           <p> Qté <?= $_SESSION['quantite'][$article['id_article']]  ?></p>
-                                          <p><?php if (isset($_SESSION['singlePrice'][$article['id_article']])) {
+                                          <p>Total <?php if (isset($_SESSION['singlePrice'][$article['id_article']])) {
                                                     echo $_SESSION['singlePrice'][$article['id_article']];
                                                 }  ?> €</p>
 
@@ -181,6 +175,8 @@
                         }
                     }
                 } ?>
+                <h3> nombre total d'articles : <?php echo $_SESSION['totalQuantity'] ?> </h3>
+                <h3>Total tva incl <?= $_SESSION['totalPrice'] ?> €</h3>
 
           </div>
 

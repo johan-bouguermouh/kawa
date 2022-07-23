@@ -15,7 +15,7 @@ function openNav() {
 
   window.addEventListener("DOMContentLoaded", () => {
     let totalPrice = 0
-    const ContentPanier = document.querySelector('.mySidenav__content')
+    const ContentPanier = document.querySelector('.sidenav__content')
 
     function isertElement(element){
       const contentProduct = document.createElement('form')

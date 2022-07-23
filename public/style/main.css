@@ -1073,6 +1073,7 @@ h1 {
 
 .selectQuatity button[name=deleteProduct] {
   margin: 0;
+  cursor: pointer;
   padding: 0;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -1082,11 +1083,10 @@ h1 {
 }
 
 .sidenav {
+  display: none;
   z-index: 99;
   height: 100%;
   /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
   position: fixed;
   /* Stay in place */
   top: 0;
@@ -1109,14 +1109,18 @@ h1 {
 
 .sidenav:target {
   overflow-y: scroll;
-  width: 100%;
   z-index: 99;
   padding: 64px 32px 64px 32px;
   /* Place content 60px from the top */
+  display: block;
 }
 
 .sidenav__content {
-  width: 391px;
+  padding-bottom: 150px;
+  padding-right: 15px;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
 }
 
 .openSideNav {
@@ -1178,12 +1182,6 @@ h1 {
 @media screen and (min-device-width: 1024px) {
   .sidenav:target {
     width: 450px;
-  }
-}
-
-@media screen and (max-device-width: 1024px) {
-  .sidenav:target {
-    width: 100%;
   }
 }
 
@@ -2571,11 +2569,8 @@ h1 {
   padding-left: 6.2rem;
 }
 
-.resumeOrder p:first-child {
-  margin-bottom: 1rem;
-}
-
 .cardProduct {
+  margin-top: 1rem;
   background-color: #f9f7f4;
   margin-bottom: 1rem;
   display: -webkit-box;
@@ -2602,13 +2597,6 @@ h1 {
 
 .resume div {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

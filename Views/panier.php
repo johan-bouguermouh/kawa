@@ -17,7 +17,7 @@ extract($controller->index());
 ?>
 <section id="mySidenav" class="sidenav">
     <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="mySidenav__content">
+    <div class="sidenav__content">
         <h1>Mon panier</h1>
 
     <?php if (empty($_SESSION['quantite'])) { ?>
