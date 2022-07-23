@@ -109,7 +109,7 @@
   }
 }
 .sidenav {
-  display: none;
+  transform: translateX(450px);
   z-index: 99;
   height: 100%; /* 100% Full-height */
   position: fixed; /* Stay in place */

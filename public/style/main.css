@@ -1083,7 +1083,8 @@ h1 {
 }
 
 .sidenav {
-  display: none;
+  -webkit-transform: translateX(450px);
+          transform: translateX(450px);
   z-index: 99;
   height: 100%;
   /* 100% Full-height */
