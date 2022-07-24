@@ -1,4 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
+
+    //FOR SEARCH CONTAINER
   let btn = document.querySelector(".btn");
   let panel = document.querySelector(".container");
   let close = document.querySelector(".close");
@@ -7,6 +9,46 @@ window.addEventListener("DOMContentLoaded", () => {
   const formSearch = document.querySelector('form[class=nav__search]')
   let indexSelect =  -1;
   let interuptSearch = false
+
+      //FOR NAV HOME
+    const NavBarre = document.querySelector('.nav')
+    const linkLogo = document.querySelector('.nav__link')
+    let posTarget = false
+    const limitedStand = window.innerWidth*0.478
+
+
+    if(window.location.pathname === '/kawa/')
+    {
+        const LogoWhite = document.createElement('img')
+        LogoWhite.src= "/kawa/public/assets/pictures/kawa_logo_white.svg";
+        LogoWhite.alt = "revenir à l'accuil principal";
+        LogoWhite.classList.add('logoWhiteDesktop')
+
+
+        linkLogo.append(LogoWhite)
+        
+        NavBarre.classList.add('homeStyleDesktop')
+        window.addEventListener('scroll', (event) => {
+            if(window.scrollY > limitedStand && posTarget !== true)
+            {
+                posTarget = true
+                LogoWhite.classList.remove('animationLogoOut')
+                NavBarre.classList.remove('animateNavDesktopOut')
+                NavBarre.classList.remove('homeStyleDesktop')
+                NavBarre.classList.add('animateNavDesktop')
+                LogoWhite.classList.add('animationLogo')
+            }
+            else if(window.scrollY < limitedStand && posTarget !== false) {
+                posTarget = false
+                LogoWhite.classList.remove('animationLogo')
+                LogoWhite.classList.add('animationLogoOut')
+                NavBarre.classList.remove('animateNavDesktop')
+                NavBarre.classList.add('animateNavDesktopOut')
+                //
+            }
+        })
+        
+    }
  
   btn.addEventListener("click", () => {
     panel.classList.add("active");

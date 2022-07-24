@@ -569,6 +569,10 @@ h1 {
   color: #135e4df5;
 }
 
+.nav__link__logo {
+  height: 40px;
+}
+
 .nav button {
   border: none;
 }
@@ -651,15 +655,99 @@ h1 {
 }
 
 @media only screen and (min-width: 1024px) {
-  .nav {
-    position: fixed;
+  .homeStyleDesktop {
+    position: fixed !important;
     top: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .homeStyleDesktop i {
+    color: white;
+  }
+  .animateNavDesktop {
+    -webkit-animation: animateNavDesktopUp 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+            animation: animateNavDesktopUp 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+    position: fixed !important;
+    top: 0;
+  }
+  @-webkit-keyframes animateNavDesktopUp {
+    from {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    to {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+  }
+  @keyframes animateNavDesktopUp {
+    from {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    to {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+  }
+  .animateNavDesktopOut {
+    animation: animateNavDesktopUp 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) reverse forwards;
+    position: fixed !important;
+    top: 0;
+  }
+  .animateNavDesktopOut i {
+    animation: animateIDesktopUp 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) reverse forwards;
+  }
+  .animateNavDesktop i {
+    -webkit-animation: animateIDesktopUp 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+            animation: animateIDesktopUp 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  }
+  @-webkit-keyframes animateIDesktopUp {
+    from {
+      color: white;
+    }
+    to {
+      color: #424242;
+    }
+  }
+  @keyframes animateIDesktopUp {
+    from {
+      color: white;
+    }
+    to {
+      color: #424242;
+    }
+  }
+  .logoWhiteDesktop {
+    position: absolute;
+    height: 40px;
+    width: 30px;
+  }
+  .animationLogo {
+    -webkit-animation: animationLogo 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+            animation: animationLogo 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  }
+  @-webkit-keyframes animationLogo {
+    from {
+      opacity: 1.0;
+    }
+    to {
+      opacity: 0.0;
+    }
+  }
+  @keyframes animationLogo {
+    from {
+      opacity: 1.0;
+    }
+    to {
+      opacity: 0.0;
+    }
+  }
+  .animationLogoOut {
+    animation: animationLogo 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) reverse forwards;
+  }
+  .nav {
+    position: initial;
     border-radius: 0 0 0 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0px 16px;
-    background-color: #ffffff00;
   }
   .nav .nav__search {
     margin-left: auto !important;
@@ -670,9 +758,7 @@ h1 {
   }
   .nav .nav__link {
     margin: 0px 16px;
-  }
-  .nav i {
-    color: white;
+    position: relative;
   }
   #notifOne {
     color: #135e4d;
@@ -1110,13 +1196,12 @@ h1 {
           backdrop-filter: blur(5px);
   overflow: hidden;
   /* Disable horizontal scroll */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 .sidenav:target {
   overflow-y: scroll;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
   z-index: 99;
   padding: 64px 32px 64px 32px;
   /* Place content 60px from the top */
@@ -1129,6 +1214,60 @@ h1 {
   overflow-y: auto;
   height: 100%;
   width: 100%;
+}
+
+.sidenavMouveDown {
+  -webkit-animation: panierMouveIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+          animation: panierMouveIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+}
+
+.sidenavMouveUp {
+  -webkit-animation: panierMouveOn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+          animation: panierMouveOn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+}
+
+@-webkit-keyframes panierMouveOn {
+  from {
+    -webkit-transform: translateX(450px);
+            transform: translateX(450px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes panierMouveOn {
+  from {
+    -webkit-transform: translateX(450px);
+            transform: translateX(450px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes panierMouveIn {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(450px);
+            transform: translateX(450px);
+  }
+}
+
+@keyframes panierMouveIn {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(450px);
+            transform: translateX(450px);
+  }
 }
 
 .openSideNav {

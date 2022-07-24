@@ -120,9 +120,10 @@
   background-color: rgba(255, 255, 255, 0.95); /* Black*/
   backdrop-filter: blur(5px);
   overflow: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  //transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   &:target {
     overflow-y: scroll;
+    transform: translateX(0px);
     z-index: 99;
     padding: 64px 32px 64px 32px; /* Place content 60px from the top */
     display: block;
@@ -135,6 +136,30 @@
     width: 100%;
   }
   
+}
+.sidenavMouveDown{
+  animation: panierMouveIn 0.5s cubic-bezier(.17,.67,.83,.67) forwards;
+  
+}
+.sidenavMouveUp{
+  animation: panierMouveOn 0.5s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+@keyframes panierMouveOn {
+  from{
+    
+    transform: translateX(450px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes panierMouveIn {
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(450px);
+  }
 }
 
 .openSideNav{

@@ -1,15 +1,21 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    console.log('in open')
+  console.log(window.location)
     // document.getElementById("mySidenav").style.width = "450px";
-    document.getElementById("mySidenav").style.transform = "translateX(0px)";
+    const panier = document.getElementById("mySidenav")
+    panier.classList.remove('sidenavMouveDown')
+    panier.classList.add('sidenavMouveUp')
   }
   
   /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
   function closeNav() {
     // document.getElementById("mySidenav").style.width = "450px";
-    document.getElementById("mySidenav").style.transform = "translateX(450px)";
+    const panier = document.getElementById("mySidenav")
+    panier.classList.remove('sidenavMouveUp')
+    panier.classList.add('sidenavMouveDown')
   }
+
+  
 
   window.addEventListener("DOMContentLoaded", () => {
     let totalPrice = 0
@@ -54,7 +60,7 @@ function openNav() {
       const footerPanier = document.createElement('section')
       footerPanier.classList.add('footerPanier')
       footerPanier.innerHTML=`
-        <p>Total tva incl : <span class="totalPrice">${totalPrice}</span> €</p>
+        <p>Total tva incl : <span class="totalPrice">${Number.parseFloat(totalPrice).toFixed(2)}</span> €</p>
         <form action="" method="post">
             <input class="button" name="goDelivery" value="commandé" type="submit">
         </form>
@@ -70,7 +76,7 @@ function openNav() {
       const footerPanier = ContentPanier.lastElementChild
       totalPrice = operator === 'up' ? totalPrice = totalPrice + price :  totalPrice = totalPrice - price
       const spanToChange = footerPanier.querySelector('span[class=totalPrice]')
-      spanToChange.innerHTML = `${totalPrice}`
+      spanToChange.innerHTML = `${Number.parseFloat(totalPrice).toFixed(2)}`
       }
 
       let indexOfForm = 0
