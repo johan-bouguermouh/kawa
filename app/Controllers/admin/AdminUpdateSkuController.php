@@ -39,13 +39,20 @@ class AdminUpdateSkuController extends Controller
         }
         if (!empty($_GET['recherche'])) {
             $result = $this->Product->find_article($_GET['recherche']);
-        } else $result = $this->Product->getAllProductForUpdate(['ASC' => 'sku']);
-        $resultSearch = $this->Product->selectArrayByValue($result, 'cat parent', @$_GET['PRINCIPALE']);
+            $resultSearch = !empty($result) ? $this->Product->selectArrayByValue($result, 'cat parent', @$_GET['PRINCIPALE']) : $result;
+            
+        } else{
+            $result = $this->Product->getAllProductForUpdate(['ASC' => 'sku']);
+            $resultSearch = $this->Product->selectArrayByValue($result, 'cat parent', @$_GET['PRINCIPALE']);
+        } 
+
+        
         $allCategories = $this->Categories->chooseCategoriesBySection(['section'], 'PRINCIPALE');
         $methodImport = new AdminUpdateProductController;
 
 
         $compact = compact('title', 'allCategories', 'urlRedirect', 'methodImport', 'resultSearch', 'urgentStock');
+       
         $this->view('administrator.updateSku', $compact);
     }
 

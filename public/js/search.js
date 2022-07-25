@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const limitedStand = window.innerWidth*0.478
 
 
-    if(window.location.pathname === '/kawa/')
+    if(window.location.pathname === '/kawa/' && NavBarre.offsetWidth >= 1024)
     {
         const LogoWhite = document.createElement('img')
         LogoWhite.src= "/kawa/public/assets/pictures/kawa_logo_white.svg";

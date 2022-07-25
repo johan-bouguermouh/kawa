@@ -55,7 +55,7 @@
             <fieldset>
                 <legend>Recherche avancée</legend>
                 <label for="site-search">Rechercher par nom</label>
-                <input type="search" name="recherche" aria-label="Search through site content">
+                <input type="search" name="recherche" aria-label="Search through site content" value="<?= isset($_GET['recherche']) ? $_GET['recherche'] : null ?>">
                 <button>Search</button>
             </fieldset>
         </form>
@@ -65,7 +65,7 @@
                 <datalist id="list_categories">
                     <option></option>
                     <?php foreach ($allCategories as $value) : ?>
-                        <option value="<?= $value['nom_categorie'] ?>"><?= $value['nom_categorie'] ?>(<?= $methodImport->countSearch($value['nom_categorie']) ?>)</option>
+                        <option value="<?= $value['nom_categorie'] ?>"><?= $value['nom_categorie'] ?>(<?= !empty($resultSearch) ? $methodImport->countSearch($value['nom_categorie']) : '0';?>)</option>
                     <?php endforeach; ?>
                 </datalist>
             </select>
