@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  & img:first-child {
+  & img:first-child:not(.logoHomePage) {
     width: 100%;
     position: absolute;
     min-height: 400px;
@@ -20,34 +20,47 @@
   }
 }
 
+
 .CTA {
   width: 60%;
+  padding-left: 10%;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   font-family: "DM Serif Display", serif;
   & H1 {
     font-size: clamp(2rem, 3vw, 6rem);
   }
   & H2 {
-    font-size: clamp(2rem, 3vw, 6rem);
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    margin-block-end: 1rem;
   }
-  & button {
+  & a {
+    padding-top: 0.8rem;
     width: 20%;
+    min-width: 100px;
     height: 50%;
-    background-color: #135e4c;
+    background-color: #0a564e;
     color: white;
     border: none;
     font-family: "century-gothic, sans-serif";
     padding: 8px 16px;
     border-radius: 4px;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     margin-top: 1rem;
-    box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
+    text-align: center;
   }
   button:hover {
     background-color: #247865;
     cursor: pointer;
+  }
+
+  & img{
+    width: 50%;
+    min-width: 200px;
   }
 }
 
@@ -306,7 +319,7 @@
   .hero {
     min-height: 290px;
     width: 100vw;
-    & img:first-child {
+    & img:first-child:not(.logoHomePage) {
       min-height: 290px;
       min-width: 536px;
     }
@@ -363,7 +376,7 @@
   }
   .hero {
     min-height: 280px;
-    & img:first-child {
+    & img:first-child:not(.logoHomePage) {
       min-height: 290px;
       min-width: 536px;
     }

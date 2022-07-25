@@ -1,9 +1,9 @@
 <section class="hero" data-aos="fade-zoom-in" data-aos-duration="3000" data-aos-delay="200">
     <img src=".\public\assets\pictures\kawa_img_hero_desktop.jpeg" alt="hero">
     <div class="CTA">
-        <h1 data-aos="fade-left" data-aos-duration="4000">Kawa</h1>
-        <h2 data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1000">Une boutique dédiée aux amateurs de café</h2>
-        <a href="./boutique/all"> <button data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="3000"> Découvrir</button> </a>
+        <img class="logoHomePage" data-aos="fade-left" data-aos-duration="4000" src=".\public\assets\pictures\kawa_logo_blac_text.svg" alt="Kawa" />
+        <h2 data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000">Une boutique dédiée aux amateurs de café</h2>
+        <a  data-aos="fade-up" data-aos-duration="4000" data-aos-delay="2000" href="./boutique/all"> Découvrir</a>
     </div>
 </section>
 <div class="homeContainer">

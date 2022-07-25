@@ -19,6 +19,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/gij8hzs.css">
     <link rel="stylesheet" href="/kawa/public/style/main.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="/kawa/public/assets/pictures/kawa_logo_color.svg">
     <script type="text/javaScript" src="/kawa/public/js/menuAdmin.js"></script>
     <script type="text/javaScript" src="/kawa/public/js/panier.js"></script>
     <script type="text/javaScript" src="/kawa/public/js/search.js"></script>

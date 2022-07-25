@@ -1422,7 +1422,7 @@ h1 {
           justify-content: center;
 }
 
-.hero img:first-child {
+.hero img:first-child:not(.logoHomePage) {
   width: 100%;
   position: absolute;
   min-height: 400px;
@@ -1434,7 +1434,18 @@ h1 {
 
 .CTA {
   width: 60%;
+  padding-left: 10%;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   font-family: "DM Serif Display", serif;
 }
@@ -1444,28 +1455,36 @@ h1 {
 }
 
 .CTA H2 {
-  font-size: clamp(2rem, 3vw, 6rem);
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
 }
 
-.CTA button {
+.CTA a {
+  padding-top: 0.8rem;
   width: 20%;
+  min-width: 100px;
   height: 50%;
-  background-color: #135e4c;
+  background-color: #0a564e;
   color: white;
   border: none;
   font-family: "century-gothic, sans-serif";
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
   margin-top: 1rem;
-  -webkit-box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
-          box-shadow: 12px 12px 2px 1px rgba(229, 220, 189, 0.58);
+  text-align: center;
 }
 
 .CTA button:hover {
   background-color: #247865;
   cursor: pointer;
+}
+
+.CTA img {
+  width: 50%;
+  min-width: 200px;
 }
 
 @media only screen and (min-device-width: 768px) {
@@ -1814,7 +1833,7 @@ h1 {
     min-height: 290px;
     width: 100vw;
   }
-  .hero img:first-child {
+  .hero img:first-child:not(.logoHomePage) {
     min-height: 290px;
     min-width: 536px;
   }
@@ -1888,7 +1907,7 @@ h1 {
   .hero {
     min-height: 280px;
   }
-  .hero img:first-child {
+  .hero img:first-child:not(.logoHomePage) {
     min-height: 290px;
     min-width: 536px;
   }

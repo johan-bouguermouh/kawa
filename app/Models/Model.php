@@ -277,7 +277,8 @@ abstract class Model
     // DELETE
     public function delete(array $donnees = Null)
     {
-        $req = "DELETE FROM {$this->table} WHERE {$this->id} =:{$this->id} AND `role` = 'Utilisateurs'";
+        $addSecurity = $this->table === 'utilisateurs' ?  "AND `role` = 'Utilisateurs'" : null;
+        $req = "DELETE FROM {$this->table} WHERE {$this->id} =:{$this->id} $addSecurity;" ;
         return $this->requete($req, $donnees);
     }
 }
