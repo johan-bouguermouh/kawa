@@ -19,7 +19,6 @@ abstract class Controller
 
     protected function view(string $path, array $params = [])
     {
-        var_dump($params);
         extract($params);
         ob_start();
         $path = str_replace('.', DIRECTORY_SEPARATOR, $path);
